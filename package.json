@@ -1,0 +1,19 @@
+{
+  "name": "zoem",
+  "version": "1.0.0",
+  "description": "zoem is a peer-to-peer carsharing platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robki/zoem.git"
+  },
+  "author": "robki & joffreymahieu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robki/zoem/issues"
+  },
+  "homepage": "https://github.com/robki/zoem#readme"
+}
