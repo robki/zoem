@@ -10,7 +10,7 @@ let staticServer = (function(port,hostname){
         res.statusCode = 200;
         res.setHeader("Content-type", "text/plain");
 
-        router.setStaticFolder(path.normalize(process.cwd()+ "/client/public"));
+        router.setStaticFolder(path.normalize(process.cwd()+ "/client/public/dist"));
 
         router.init(req,res,function(err,rs,mimeType){
             process.on("UncaughtException",(err) =>{
