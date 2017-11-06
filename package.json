@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/robki/zoem/issues"
   },
-  "homepage": "https://github.com/robki/zoem#readme"
+  "homepage": "https://github.com/robki/zoem#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.0"
+  }
 }
