@@ -65,7 +65,7 @@ body{
     /*position: relative;*/
     width: 100%;
 }
-.zm-headtext{
+.zm-imagetext{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -73,13 +73,24 @@ body{
 }
 .zm-carads{
    /*width: 100%;*/
-   margin-top: 50px;
+   margin-top: 25px;
    margin-right: 25px;
    margin-left: 25px;
    display: flex;
    flex-direction: row;
    justify-content: center;
 
+}
+.zm-adstitle{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    display: table;
+    margin: 25px 0 25px 0;
+}
+.zm-adstitle h1{
+    display: table-cell;
+    vertical-align: middle;
 }
 .zm-carad{
     margin: 0 25px 0 25px;
@@ -123,6 +134,7 @@ body{
 .zm-containersplit{
     /*margin-top: 50px;*/
     margin: 50px 50px 50px 50px;
+    height: 400px;
 }
 .zm-halfl{
     float:left;
@@ -137,4 +149,25 @@ body{
     width: 100%;
     background-position: center;
     background-size: cover;
+}
+.zm-containersplit:after{
+    clear: both;
+}
+.zm-join{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+.zm-join img{
+    /*position: relative;*/
+    width: 100%;
+    height: auto;
+}
+.zm-footer{
+    background-color: #16DA00;
+    height: 300px;
+    margin: 0 0 0 0;
+}
+.zm-footernav{
+    margin: 25px 50px 25px 50px;
 }
