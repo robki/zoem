@@ -33,7 +33,10 @@ a{
     cursor: pointer;
 
 }
-
+.zm-logo:hover{
+    transition: .5s ease;
+    opacity: 0.3;
+}
 .zm-logo img{
     height: 50px;
 }
@@ -89,6 +92,7 @@ a{
    display: flex;
    flex-direction: row;
    justify-content: center;
+   cursor: pointer;
 
 }
 .zm-carad{
@@ -156,12 +160,44 @@ a{
     height: 400px;
     width: 100%;
     overflow: hidden;
+    background: url("../images/mobiles2.jpg") no-repeat;
+    background-size: 100%;
+    text-align: center;
+    /*vertical-align: center;*/
+
 }
-.zm-join img{
-    /*position: relative;*/
+/* .zm-join img{
+    position: relative;
     width: 100%;
     height: auto;
+} */
+.zm-jointext{
+    margin-top:150px;
 }
+.zm-joinbutton{
+   margin-top: 80px;
+}
+.zm-joinbutton:active{
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+}
+.zm-joinbutton a{
+    background-color: #2B16E0;
+    color: #FFF;
+    position: relative;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border-bottom: 5px solid #1F10A1;
+    text-shadow: 0px -2px #1F10A1;
+    font-weight: bold;
+    
+}
+.zm-joinbutton a:active{
+    border-bottom: none;
+}
+
+
+
 .zm-footer{
     background-color: #16DA00;
     height: 300px;
