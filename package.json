@@ -1,25 +1,17 @@
 {
   "name": "zoem",
-  "version": "1.0.0",
-  "description": "zoem is a peer-to-peer carsharing platform",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/robki/zoem.git"
-  },
-  "author": "robki & joffreymahieu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/robki/zoem/issues"
-  },
-  "homepage": "https://github.com/robki/zoem#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-csslint": "^1.0.0"
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
   }
 }

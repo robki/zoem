@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zoem</title>
+    <link rel="stylesheet" href="stylesheets/app.css">
+</head>
+
+<body>
+    <div class="zm-page">
+        <div class="zm-header">
+            <div class="zm-logo" onclick="location.href='index.html';">
+                <img src="images/ZoemLogo.png">
+            </div>
+            <div class="zm-menu">
+                <ul class="zm-nav">
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a onclick="document.getElementById('id01').style.display='block'">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="zm-upimage">
+            <img src="images/inside_Car.jpg">
+            <div class="zm-imagetext">
+                <h1 class="zm-headtitle">Lorem ipsum</h1>
+                <p class="zm-headdesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="zm-adstitle">
+        <h1 class="adstext">Lorem ipsum</h1>
+    </div>
+    <div class="zm-carads">
+        <div class="zm-carad">
+            <img src="images/Auris-Hybrid.jpg">
+            <div class="zm-caroverlay">
+                <div class="zm-cardesc">€ 25 - Brugge</div>
+            </div>
+
+        </div>
+        <div class="zm-carad">
+            <img src="images/tesla.jpg">
+            <div class="zm-caroverlay">
+                <div class="zm-cardesc">€ 60 - Brussel</div>
+            </div>
+        </div>
+        <div class="zm-carad">
+            <img src="images/Volkswagen-GTE.jpg">
+            <div class="zm-caroverlay">
+                <div class="zm-cardesc">€ 40 - Brugge</div>
+            </div>
+        </div>
+    </div>
+    <div class="zm-containersplit">
+        <div class="zm-halfl">
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores expedita velit laudantium eligendi reiciendis
+                nulla facilis, vero voluptate perspiciatis excepturi numquam praesentium alias tenetur, accusantium at molestiae
+                non, temporibus molestias!</p>
+        </div>
+        <div class="zm-halfr">
+            <img class="zm-halfimg" src="images/travel2.jpg">
+        </div>
+
+    </div>
+    <div class="zm-join">
+        <!-- <img src="images/mobiles2.jpg"> -->
+        <h1 class="zm-jointext">Lorem ipsum</h1>
+        <div class="zm-joinbutton">
+            <a href="#">List your car</a>
+        </div>
+
+    </div>
+    <div id="id02" class="modal full">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content animate" action="/action_page.php">
+              <div class="container">
+                <h2>Log in on Zoem</h2> 
+        
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+          
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+          
+                <input type="checkbox" checked="checked"> Remember me
+          
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                  <button type="submit" class="loginbtn">Log in</button>
+                </div>
+                <div class="Login">
+                    <p>Don’t have an account? <a onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='none'">Sign up</a></p>
+                </div>
+              </div>
+            </form>
+  </div>
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="container">
+        <h2>Sign up on Zoem</h2> 
+        <label><b>Firstname</b></label>
+        <input type="text" placeholder="Enter Firstname" name="firstname" required>
+
+        <label><b>Lastname</b></label>
+        <input type="text" placeholder="Enter Lastname" name="lastname" required>
+
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+  
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+  
+        <label><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <input type="checkbox" checked="checked"> Remember me
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+  
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+        <div class="Login">
+            <p>Already have an account? <a onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block';">Log in</a></p>
+        </div>
+      </div>
+    </form>
+</div>
+    <div class="zm-footer">
+        <div class="zm-footernav">
+            <a href="./about.html">About</a>
+            <a href="./register.html">Register</a>
+        </div>
+    </div>
+</body>
+<script>
+    // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</html>
