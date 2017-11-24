@@ -3,10 +3,14 @@
 /**
  * Module dependencies.
  */
-
+var config = require("../config");
 var app = require('../app');
 var debug = require('debug')('zoem:server');
 var http = require('http');
+
+var DBService = require("../data/connectDBService.js");
+var connectDB = DBService(config.MONGODBURL,require("mongoose"));
+
 
 /**
  * Get port from environment and store in Express.
