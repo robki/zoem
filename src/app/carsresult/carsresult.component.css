@@ -1,0 +1,54 @@
+.zm-searchnav{
+    text-align: center;
+    margin-top: 25px;
+}
+.zm-searchcars{
+    width: 100%;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #2B16E0;
+    background-color: white;
+    
+}
+.zm-searchcars div{
+    display: inline-block;
+    text-align: left;
+}
+.zm-searchcars input{
+    display: block;
+    width: 110px;
+    height: 40px;
+    padding: 0 5px 0 5px;
+    background-color: white; 
+    outline: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+.zm-searchplace, .zm-searchfrom, .zm-searchuntill{
+    width: 120px;
+    padding: 10px;
+    margin: 5px 5px 5px 5px;
+    
+}
+.zm-searchbutton{
+    margin: 5px 5px 5px 5px;
+   
+    
+}
+.zm-searchbutton button{
+    height: 40px;
+    background-color: #FFF;
+    color: #2B16E0;
+    position: relative;
+    padding: 0px 40px;
+    border-radius: 10px;
+    /*border-bottom: 5px solid #1F10A1;*/
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+}
+.zm-searchbutton button:hover{
+    background-color: rgb(31, 16, 163);
+}
