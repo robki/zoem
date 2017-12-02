@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import '../../scripts/app.js';
 @Component({
   selector: 'zm-header',
   templateUrl: './header.component.html',
@@ -11,5 +11,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+  test():void{
+    console.log("worksss")
+}
 
 }
