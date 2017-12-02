@@ -1,0 +1,20 @@
+.zm-footer{
+    background-color: #2a2a2a;
+    height: 300px;
+    margin: 0 0 0 0;
+    box-shadow: inset 0px 11px 10px -10px #262626;
+}
+.zm-footernav{
+    padding: 25px 50px 25px 50px
+}
+.zm-footercopy{
+    height: 100px; 
+    width: 100%;
+}
+.zm-footercopy p{
+    text-align: center;
+    top: 15px;
+}
+a, p{
+    color: white;
+}
