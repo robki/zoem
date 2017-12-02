@@ -9,6 +9,7 @@
     font-weight: bold;
     color: #2B16E0;
     background-color: #2a2a2a;
+    box-shadow: 1px 1px 1px #26262652;
     
 }
 .zm-searchcars div{
@@ -49,6 +50,7 @@
     font-weight: bold;
     text-align: center;
     border: 0;
+    cursor: pointer;
 }
 .zm-searchbutton button:hover{
     background-color: #2a2a2a
@@ -69,6 +71,7 @@
     margin-right: 68px;
     flex-direction: column;
     color: white;
+    box-shadow: 1px 1px 1px #26262652;
 }
 .zm-filters{
     width: 80%;
@@ -76,7 +79,8 @@
 }
 .zm-allcars{
     width: 70%;
-    background-color: black;
+    background-color: #f0f0f0;
     height: 900px;
+    box-shadow: 1px 1px 1px #26262652;
 
 }

@@ -8,6 +8,7 @@
     position: relative;
     text-align: center;
     color:black;
+    box-shadow: 1px 1px 1px #26262652;
 }
 .zm-upimage img{
     /*position: relative;*/
@@ -102,6 +103,7 @@
 .zm-halfr{
     float: right;
     width: 50%;
+    box-shadow: 1px 1px 1px #26262652;
 }
 .zm-halfr img{
     width: 100%;

@@ -7,6 +7,7 @@
     position: relative;
     text-align: center;
     color:black;
+    box-shadow: 1px 1px 1px #26262652;
 }
 .zm-upimage img{
     /*position: relative;*/
