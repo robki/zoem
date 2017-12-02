@@ -1,30 +1,40 @@
 <div class="zm-searchnav">
-    <div class="zm-searchcars">
-        <div class="zm-searchplace">
-          <input type="text" placeholder="Address, airport,...">
-        </div>
-        <div class="zm-searchfrom">
-          <input type="text" placeholder="From...">
-        </div>
-        <div class="zm-searchuntill">
-          <input type="text" placeholder="Until...">
-        </div>
-        <div class="zm-searchbutton">
-          <button [routerLink]="['/carsresult']">Search</button>
-        </div>
-      </div>
+  <div class="zm-searchcars">
+    <div class="zm-searchplace">
+      <input type="text" placeholder="Address, airport,...">
+    </div>
+    <div class="zm-searchfrom">
+      <input type="text" placeholder="From...">
+    </div>
+    <div class="zm-searchuntill">
+      <input type="text" placeholder="Until...">
+    </div>
+    <div class="zm-searchbutton">
+      <button [routerLink]="['/carsresult']">Search</button>
+    </div>
+  </div>
 </div>
 <div class="zm-fullpage">
   <div class="zm-carfilter">
-    <p>Sort by</p>
-    <select>
-      <option>Relevance</option>
-      <option>Price: low-high</option>
-      <option>Price: high-low</option>
-    </select>
+    <div class="zm-filters">
+      <p>Sort by</p>
+      <select>
+        <option>Relevance</option>
+        <option>Price: low-high</option>
+        <option>Price: high-low</option>
+      </select>
+      <p>Price</p>
+      <p>HIER KOMT SLIDER</p>
+      <select>
+        <option>All years</option>
+        <option>Less then 5 years old</option>
+        <option>Less then 10yearls old</option>
+      </select>
+    </div>
   </div>
+
   <div class="zm-allcars">
-    
+
   </div>
 
 </div>
