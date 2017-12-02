@@ -55,12 +55,15 @@
 
 .zm-fullpage{
     width: 100%;
+    
 }
 .zm-carfilter{
     width: 20%;
     background-color: blue;
+    height: 400px;
 }
 .zm-allcars{
     width: 75%;
     background-color: black;
+
 }

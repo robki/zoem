@@ -28,13 +28,13 @@
 }
 .zm-adstext{
     color: white;
-    margin: 0 0 25px 0;
+    margin: 0 0 15px 0;
     padding-top: 50px;
 }
 .zm-payedcars{
     width: 100%;
     background-color: #2a2a2a;
-    height: 400px;
+    height: 500px;
 
 }
 .zm-carads{
@@ -90,7 +90,7 @@
 }
 .zm-containersplit{
     /*margin-top: 50px;*/
-    margin: 100px 50px 87px 50px;
+    margin: 100px 50px 158px 50px;
     height: 300px;
     
 }
