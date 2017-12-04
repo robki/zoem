@@ -48,6 +48,7 @@
    justify-content: center;
    cursor: pointer;
    /*padding-top: 50px;*/
+   
 
 }
 .zm-carad{
@@ -59,6 +60,7 @@
 }
 .zm-carad img{
     width: 100%;
+    box-shadow: 1px 1px 1px #26262652;
 }
 .zm-caroverlay{
     position: absolute;
