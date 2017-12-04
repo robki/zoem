@@ -31,7 +31,7 @@ button {
 .container {
     padding: 16px;
 }
-.modal {
+.modal2 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -47,7 +47,7 @@ button {
 .modal-content {
     /*background-color: #fefefe;*/
     /*background-image: url("../../assets/connect.png");
-     background-repeat: repeat; */
+    background-repeat: repeat; */
     background-color: #f0f0f0;
     box-shadow: 1px 1px 1px #26262652;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */

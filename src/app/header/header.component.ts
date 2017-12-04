@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import '../../scripts/app.js';
+import { SignupComponent } from '../signup/signup.component'
 @Component({
   selector: 'zm-header',
   templateUrl: './header.component.html',
@@ -13,6 +14,10 @@ export class HeaderComponent implements OnInit {
   }
   test():void{
     console.log("worksss")
+
 }
+  open():void{
+    (<HTMLInputElement>document.getElementById('modal')).style.display = 'block';
+  }
 
 }

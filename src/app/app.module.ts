@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { SignupComponent } from './signup/signup.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { CarsresultComponent } from './carsresult/carsresult.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CarsresultComponent } from './carsresult/carsresult.component';
     SignupComponent,
     DatepickerComponent,
     CarsresultComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
