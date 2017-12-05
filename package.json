@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "run" : "ng build && node server.js"
+    "run": "ng build && node node ./bin/www",
+    "host": "node ./bin/www"
   },
   "private": true,
   "dependencies": {
@@ -25,9 +26,13 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "core-js": "^2.4.1",
     "express": "^4.16.2",
+    "mongoose": "^4.13.6",
+    "morgan": "^1.9.0",
     "rxjs": "^5.5.2",
+    "serve-favicon": "^2.4.5",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
