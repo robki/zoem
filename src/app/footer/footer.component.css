@@ -6,7 +6,7 @@ h4{
     background-color: #2a2a2a;
     height: 200px;
     width: 100%;
-    box-shadow: inset 0px 11px 10px -10px #262626;
+    /*box-shadow: inset 0px 11px 10px -10px #262626;*/
     display: flex;
     justify-content: center;
 
@@ -40,4 +40,24 @@ h4{
 }
 a, p{
     color: white;
+}
+@media only screen and (max-width: 840px) {
+    .zm-footer{
+        display: block;
+        width: 100%;
+        height: 350px;
+    }
+    .zm-footercopy p{
+        padding: 15px 0 0 0;
+    }
+    .zm-info, .zm-footernav, .zm-social{
+        height: 110px;
+        margin: 0 auto;
+        width: 100%;
+
+    }
+    .zm-social img{
+        width: 10%;
+        margin: 0 15px 0 15px;
+    }
 }
