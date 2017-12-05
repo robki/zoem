@@ -2,10 +2,10 @@
 
 const express = require('express');
 const router = express.Router();
+const users = require("../../data/models/usersRepo");
+
 
 /* GET api listing. */
-router.get('/', (req, res) => {
-  res.send('api works');
-});
+router.get('/', users.getAllUsers);
 
 module.exports = router;
