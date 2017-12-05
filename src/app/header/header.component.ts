@@ -7,10 +7,21 @@ import { SignupComponent } from '../signup/signup.component'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    
+  }
+  openhamburger():void{
+    (<HTMLInputElement>document.getElementById('zm-hamburger')).style.display = 'none';
+    (<HTMLInputElement>document.getElementById('zm-cross')).style.display = 'block';
+    (<HTMLInputElement>document.getElementById('zm-menu-mob')).style.display = 'block';
+  }
+  closenav():void{
+    (<HTMLInputElement>document.getElementById('zm-menu-mob')).style.display = 'none';
+    (<HTMLInputElement>document.getElementById('zm-cross')).style.display = 'none';
+    (<HTMLInputElement>document.getElementById('zm-hamburger')).style.display = 'block';
+
   }
   test():void{
     console.log("worksss")
@@ -19,5 +30,5 @@ export class HeaderComponent implements OnInit {
   open():void{
     (<HTMLInputElement>document.getElementById('modal')).style.display = 'block';
   }
-
+  
 }

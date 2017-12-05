@@ -8,8 +8,21 @@
         <a href="" [routerLink]="['/about']">About</a>
       </li>
       <li>
-        <a (click)="open()" >Sign Up</a>
+        <a (click)="open()">Sign Up</a>
       </li>
     </ul>
   </div>
+  <button class="zm-hamburger" id="zm-hamburger" (click)="openhamburger()">&#9776;</button>
+  <button class="zm-cross" id="zm-cross" (click)="closenav()">&#735;</button>
+</div>
+<div class="zm-menu-mob" id="zm-menu-mob">
+  <ul class="zm-nav-mob" id="zm-nav-mob">
+    <li>
+      <a href="" [routerLink]="['/about']" (click)="closenav()">About</a>
+    </li>
+    <li>
+      <a (click)="open()" (click)="closenav()" >Sign Up</a>
+    </li>
+  </ul>
+
 </div>
