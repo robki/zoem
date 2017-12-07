@@ -10,7 +10,6 @@ import { PageComponent } from './page/page.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { SignupComponent } from './signup/signup.component';
-import { DatepickerComponent } from './datepicker/datepicker.component';
 import { CarsresultComponent } from './carsresult/carsresult.component';
 import { LoginComponent } from './login/login.component';
 
@@ -22,7 +21,6 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     AboutComponent,
     SignupComponent,
-    DatepickerComponent,
     CarsresultComponent,
     LoginComponent,
   ],
