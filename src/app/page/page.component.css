@@ -26,6 +26,7 @@
     text-align: center;
     margin:  0 0 0 0 ;
     color: white;
+    z-index: 10;
 }
 .zm-adstext{
     color: white;
@@ -158,7 +159,7 @@
     background-color: rgb(31, 16, 163);
 }
 .zm-searchcars{
-    width: 700px;
+    width: 900px;
     margin: 0 auto;
     display: inline-block;
     font-weight: bold;
@@ -170,22 +171,12 @@
     text-align: left;
 }
 .zm-searchcars input{
-    display: block;
-    width: 110px;
-    height: 40px;
-    padding: 0 5px 0 5px;
-    background-color: white; 
-    outline: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 0px;
+  width: 100px;
+  font-size: 12px;
+  padding: 10px 10px 10px 10px;
 }
 .zm-searchplace, .zm-searchfrom, .zm-searchuntill{
-    width: 120px;
-    padding: 10px;
-    margin: 5px 5px 5px 5px;
-    
+
 }
 .zm-searchbutton{
     margin: 5px 5px 5px 5px;

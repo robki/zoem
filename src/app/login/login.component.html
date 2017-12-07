@@ -1,23 +1,30 @@
-<div class="modal2 full" id="modal2">
-    <form class="modal-content animate" action="">
-        <div class="container">
-          <h2>Log in on Zoem</h2> 
-      
-          <label><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-      
-          <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-      
-          <input type="checkbox" checked="checked"> Remember me
-      
-          <div class="clearfix">
-            <button type="button" (click)="close()" class="cancelbtn">Cancel</button>
-            <button type="submit" class="loginbtn">Log in</button>
-          </div>
-          <div class="Login">
-              <p>Don’t have an account? <a (click)="gosignup()">Sign up</a></p>
-          </div>
-        </div>
-      </form>
+<div class="modal2 full" id="modal2" (click)="close();">
+  <span (click)="close()" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="">
+    <div class="container">
+      <h2>Log in on Zoem</h2>
+
+      <label>
+        <b>Email</b>
+      </label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label>
+        <b>Password</b>
+      </label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <input type="checkbox" checked="checked"> Remember me
+
+      <div class="clearfix">
+        <button type="button" (click)="close()" class="cancelbtn">Cancel</button>
+        <button type="submit" class="loginbtn">Log in</button>
+      </div>
+      <div class="Login">
+        <p>Don’t have an account?
+          <a (click)="gosignup()">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </form>
 </div>

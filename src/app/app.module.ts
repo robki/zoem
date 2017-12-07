@@ -13,6 +13,10 @@ import { SignupComponent } from './signup/signup.component';
 import { CarsresultComponent } from './carsresult/carsresult.component';
 import { LoginComponent } from './login/login.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import {FormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +27,14 @@ import { LoginComponent } from './login/login.component';
     SignupComponent,
     CarsresultComponent,
     LoginComponent,
+    DatepickerComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
