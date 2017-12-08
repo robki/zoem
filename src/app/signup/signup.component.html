@@ -1,4 +1,4 @@
-<div class="modal" id="modal" (click)="close();">
+<div class="modal" id="modal" >
   <span (click)="close()" class="close" title="Close Modal">&times;</span>
   <form class="modal-content animate" action="">
     <div class="container">
@@ -6,7 +6,7 @@
       <label>
         <b>Firstname</b>
       </label>
-      <input type="text" placeholder="Enter Firstname" name="firstname" required>
+      <input type="text" placeholder="Enter Firstname" name="firstname" required id="firstname">
 
       <label>
         <b>Lastname</b>
@@ -33,7 +33,7 @@
 
       <div class="clearfix">
         <button type="button" (click)="close()" id="cancelbtn" class="cancelbtn">Cancel</button>
-        <button type="submit"  class="signupbtn">Sign Up</button>
+        <button type="submit"  class="signupbtn" (click)="sign();">Sign Up</button>
       </div>
       <div class="Login">
         <p>Already have an account?
