@@ -24,13 +24,16 @@ export class SignupComponent {
 
   }
   sign():void{
-    let name: string;
+    // let name: string;
     
-    name = (<HTMLInputElement>document.getElementById('firstname')).value;
-    console.log(name);
+    /* name = (<HTMLInputElement>document.getElementById('firstname')).value;
+    console.log(name); */
 
 
     this.user.firstName = (<HTMLInputElement>document.getElementById('firstname')).value;
+    this.user.lastName = (<HTMLInputElement>document.getElementById('lastname')).value;
+    this.user.email = (<HTMLInputElement>document.getElementById('email')).value;
+    this.user.password = (<HTMLInputElement>document.getElementById('psw')).value;
     
     this.http.post('hier linkje lokalhost/users', this.user)
     .subscribe(
