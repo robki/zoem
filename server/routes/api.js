@@ -2,7 +2,6 @@
 
 const express = require('express');
 const router = express.Router();
-const users = require("../../data/models/usersRepo");
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 
@@ -59,5 +58,25 @@ router.get('/cars', (req, res) => {
             });
     });
 });
+
+var bodyParser = require('body-parser');
+router.use(bodyParser.urlencoded({ extended: true }));
+
+var User = require('../../data/models/userModel');
+
+// CREATES A NEW USER
+router.post('/', function (req, res) {
+    
+        User.create({
+                firstName : req.body.firstname,
+                lastName : req.body.lastname,
+                
+            }, 
+            function (err, user) {
+                if (err) return res.status(500).send("There was a problem adding the information to the database.");
+                res.status(200).send(user);
+            });
+    
+    });
 
 module.exports = router;
