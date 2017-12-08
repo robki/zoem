@@ -198,4 +198,27 @@
 .zm-searchbutton button:hover{
     background-color: rgb(31, 16, 163);
 }
+@media only screen and (max-width: 840px) {
+    .zm-upimage{
+    }
+    .zm-upimage image{
+        height: 100%;
+    }
+    .zm-imagetext{
+        width: 100%;
+        height: 100%;
+       
+    }
+    .zm-headtitle{
+        transform: none;
+        
+    }
+    .zm-headdesc{
+        transform: none;
+    }
+
+    .zm-searchcars{
+    }
+
+}
 
