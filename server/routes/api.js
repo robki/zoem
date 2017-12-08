@@ -65,7 +65,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 var User = require('../../data/models/userModel');
 
 // CREATES A NEW USER
-router.post('/', function (req, res) {
+router.post('/user', function (req, res) {
     
         User.create({
                 firstName : req.body.firstname,

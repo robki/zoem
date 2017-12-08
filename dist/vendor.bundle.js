@@ -20089,7 +20089,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* Version *
 /* unused harmony export JsonpClientBackend */
 /* unused harmony export JsonpInterceptor */
 /* unused harmony export HttpClientJsonpModule */
-/* unused harmony export HttpClientModule */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HttpClientModule; });
 /* unused harmony export HttpClientXsrfModule */
 /* unused harmony export ɵinterceptingHandler */
 /* unused harmony export HttpParams */

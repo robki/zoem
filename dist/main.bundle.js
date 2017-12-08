@@ -201,12 +201,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__datepicker_datepicker_component__ = __webpack_require__("../../../../../src/app/datepicker/datepicker.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -241,9 +243,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_13__angular_forms__["a" /* FormsModule */]
+                __WEBPACK_IMPORTED_MODULE_13__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_common_http__["b" /* HttpClientModule */]
             ],
-            providers: [],
+            providers: [__WEBPACK_IMPORTED_MODULE_14__angular_common_http__["b" /* HttpClientModule */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -678,7 +681,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal\" id=\"modal\" >\n  <span (click)=\"close()\" class=\"close\" title=\"Close Modal\">&times;</span>\n  <form class=\"modal-content animate\" action=\"\">\n    <div class=\"container\">\n      <h2>Sign up on Zoem</h2>\n      <label>\n        <b>Firstname</b>\n      </label>\n      <input type=\"text\" placeholder=\"Enter Firstname\" name=\"firstname\" required id=\"firstname\">\n\n      <label>\n        <b>Lastname</b>\n      </label>\n      <input type=\"text\" placeholder=\"Enter Lastname\" name=\"lastname\" required>\n\n      <label>\n        <b>Email</b>\n      </label>\n      <input type=\"text\" placeholder=\"Enter Email\" name=\"email\" required>\n\n      <label>\n        <b>Password</b>\n      </label>\n      <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" required>\n\n      <label>\n        <b>Repeat Password</b>\n      </label>\n      <input type=\"password\" placeholder=\"Repeat Password\" name=\"psw-repeat\" required>\n      <input type=\"checkbox\" checked=\"checked\"> Remember me\n      <p>By creating an account you agree to our\n        <a href=\"#\">Terms & Privacy</a>.</p>\n\n      <div class=\"clearfix\">\n        <button type=\"button\" (click)=\"close()\" id=\"cancelbtn\" class=\"cancelbtn\">Cancel</button>\n        <button type=\"submit\"  class=\"signupbtn\" (click)=\"sign();\">Sign Up</button>\n      </div>\n      <div class=\"Login\">\n        <p>Already have an account?\n          <a (click)=\"gologin()\">Log in</a>\n        </p>\n      </div>\n    </div>\n  </form>\n</div>"
+module.exports = "<div class=\"modal\" id=\"modal\" >\n  <span (click)=\"close()\" class=\"close\" title=\"Close Modal\">&times;</span>\n  <form class=\"modal-content animate\" action=\"\">\n    <div class=\"container\">\n      <h2>Sign up on Zoem</h2>\n      <label>\n        <b>Firstname</b>\n      </label>\n      <input type=\"text\" placeholder=\"Enter Firstname\" name=\"firstname\" id=\"firstname\" required >\n\n      <label>\n        <b>Lastname</b>\n      </label>\n      <input type=\"text\" placeholder=\"Enter Lastname\" name=\"lastname\" id=\"lastname\" required>\n\n      <label>\n        <b>Email</b>\n      </label>\n      <input type=\"text\" placeholder=\"Enter Email\" name=\"email\" id=\"email\">\n\n      <label>\n        <b>Password</b>\n      </label>\n      <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" id=\"psw\">\n\n      <label>\n        <b>Repeat Password</b>\n      </label>\n      <input type=\"password\" placeholder=\"Repeat Password\" name=\"psw-repeat\">\n      <input type=\"checkbox\" checked=\"checked\"> Remember me\n      <p>By creating an account you agree to our\n        <a href=\"#\">Terms & Privacy</a>.</p>\n\n      <div class=\"clearfix\">\n        <button type=\"button\" (click)=\"close()\" id=\"cancelbtn\" class=\"cancelbtn\">Cancel</button>\n        <button type=\"submit\"  class=\"signupbtn\" (click)=\"sign();\">Sign Up</button>\n      </div>\n      <div class=\"Login\">\n        <p>Already have an account?\n          <a (click)=\"gologin()\">Log in</a>\n        </p>\n      </div>\n    </div>\n  </form>\n</div>"
 
 /***/ }),
 
@@ -707,28 +710,25 @@ var SignupComponent = (function () {
         this.http = http;
         this.user = new __WEBPACK_IMPORTED_MODULE_1__models_user__["a" /* User */]();
     }
-    /*public close(){
-      /*alert('anso');*/ /*
-    (<HTMLInputElement>document.getElementById('modal')).style.display = 'none';
-}*/
+    SignupComponent.prototype.sign = function () {
+        this.user.firstName = document.getElementById('firstname').value;
+        this.user.lastName = document.getElementById('lastname').value;
+        this.user.email = document.getElementById('email').value;
+        this.user.password = document.getElementById('psw').value;
+        this.http.post('http://localhost:3000/api/user', this.user)
+            .subscribe(function (res) {
+            console.log(res);
+        }, function (err) {
+            console.log(err.message);
+        });
+        console.log(__WEBPACK_IMPORTED_MODULE_1__models_user__["a" /* User */]);
+    };
     SignupComponent.prototype.close = function () {
         document.getElementById('modal').style.display = 'none';
     };
     SignupComponent.prototype.gologin = function () {
         document.getElementById('modal2').style.display = 'block';
         document.getElementById('modal').style.display = 'none';
-    };
-    SignupComponent.prototype.sign = function () {
-        var name;
-        name = document.getElementById('firstname').value;
-        console.log(name);
-        this.user.firstName = document.getElementById('firstname').value;
-        this.http.post('hier linkje lokalhost/users', this.user)
-            .subscribe(function (res) {
-            console.log(res);
-        }, function (err) {
-            console.log(err.message);
-        });
     };
     SignupComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
