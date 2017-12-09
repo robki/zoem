@@ -70,6 +70,8 @@ router.post('/user', function (req, res) {
         User.create({
                 firstName : req.body.firstname,
                 lastName : req.body.lastname,
+                email : req.body.email,
+                password : req.body.password
                 
             }, 
             function (err, user) {

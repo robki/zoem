@@ -711,8 +711,8 @@ var SignupComponent = (function () {
         this.user = new __WEBPACK_IMPORTED_MODULE_1__models_user__["a" /* User */]();
     }
     SignupComponent.prototype.sign = function () {
-        this.user.firstName = document.getElementById('firstname').value;
-        this.user.lastName = document.getElementById('lastname').value;
+        this.user.firstname = document.getElementById('firstname').value;
+        this.user.lastname = document.getElementById('lastname').value;
         this.user.email = document.getElementById('email').value;
         this.user.password = document.getElementById('psw').value;
         this.http.post('http://localhost:3000/api/user', this.user)

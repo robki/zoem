@@ -18,8 +18,8 @@ export class SignupComponent {
   public user: User;
   sign():void{
 
-    this.user.firstName = (<HTMLInputElement>document.getElementById('firstname')).value;
-    this.user.lastName = (<HTMLInputElement>document.getElementById('lastname')).value;
+    this.user.firstname = (<HTMLInputElement>document.getElementById('firstname')).value;
+    this.user.lastname = (<HTMLInputElement>document.getElementById('lastname')).value;
     this.user.email = (<HTMLInputElement>document.getElementById('email')).value;
     this.user.password = (<HTMLInputElement>document.getElementById('psw')).value;
 
