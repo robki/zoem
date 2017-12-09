@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import {FormsModule} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,10 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
