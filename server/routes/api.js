@@ -1,5 +1,3 @@
-//TODO
-
 const express = require('express');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
@@ -92,6 +90,17 @@ router.get('/user/:id', function (req, res) {
     res.status(200).send(user);
   });
 
+});
+
+// UPDATE A USER (TODO)
+
+// DELETE A USER (TODO)
+router.delete('/user/:id', function (req, res) {
+
+  User.findByIdAndRemove(req.params.id, function (err, user) {
+    if (err) return res.status(500).send("There was a problem deleting the user.");
+    res.status(200).send("User " + user.lastName + " " + user.firstName  + " was deleted.");
+  });
 });
 
 module.exports = router;
