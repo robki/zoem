@@ -579,6 +579,21 @@ var LoginComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/models/user.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
+var User = (function () {
+    function User() {
+    }
+    return User;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/page/page.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -663,7 +678,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal\" id=\"modal\" (click)=\"close();\">\r\n  <span (click)=\"close()\" class=\"close\" title=\"Close Modal\">&times;</span>\r\n  <form class=\"modal-content animate\" action=\"\">\r\n    <div class=\"container\">\r\n      <h2>Sign up on Zoem</h2>\r\n      <label>\r\n        <b>Firstname</b>\r\n      </label>\r\n      <input type=\"text\" placeholder=\"Enter Firstname\" name=\"firstname\" required>\r\n\r\n      <label>\r\n        <b>Lastname</b>\r\n      </label>\r\n      <input type=\"text\" placeholder=\"Enter Lastname\" name=\"lastname\" required>\r\n\r\n      <label>\r\n        <b>Email</b>\r\n      </label>\r\n      <input type=\"text\" placeholder=\"Enter Email\" name=\"email\" required>\r\n\r\n      <label>\r\n        <b>Password</b>\r\n      </label>\r\n      <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" required>\r\n\r\n      <label>\r\n        <b>Repeat Password</b>\r\n      </label>\r\n      <input type=\"password\" placeholder=\"Repeat Password\" name=\"psw-repeat\" required>\r\n      <input type=\"checkbox\" checked=\"checked\"> Remember me\r\n      <p>By creating an account you agree to our\r\n        <a href=\"#\">Terms & Privacy</a>.</p>\r\n\r\n      <div class=\"clearfix\">\r\n        <button type=\"button\" (click)=\"close()\" id=\"cancelbtn\" class=\"cancelbtn\">Cancel</button>\r\n        <button type=\"submit\"  class=\"signupbtn\">Sign Up</button>\r\n      </div>\r\n      <div class=\"Login\">\r\n        <p>Already have an account?\r\n          <a (click)=\"gologin()\">Log in</a>\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>"
+module.exports = "<div class=\"modal\" id=\"modal\" >\r\n  <span (click)=\"close()\" class=\"close\" title=\"Close Modal\">&times;</span>\r\n  <form class=\"modal-content animate\" action=\"\">\r\n    <div class=\"container\">\r\n      <h2>Sign up on Zoem</h2>\r\n      <label>\r\n        <b>Firstname</b>\r\n      </label>\r\n      <input type=\"text\" placeholder=\"Enter Firstname\" name=\"firstname\" id=\"firstname\" required >\r\n\r\n      <label>\r\n        <b>Lastname</b>\r\n      </label>\r\n      <input type=\"text\" placeholder=\"Enter Lastname\" name=\"lastname\" id=\"lastname\" required>\r\n\r\n      <label>\r\n        <b>Email</b>\r\n      </label>\r\n      <input type=\"text\" placeholder=\"Enter Email\" name=\"email\" id=\"email\" required>\r\n\r\n      <label>\r\n        <b>Password</b>\r\n      </label>\r\n      <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" id=\"psw\" required>\r\n\r\n      <label>\r\n        <b>Repeat Password</b>\r\n      </label>\r\n      <input type=\"password\" placeholder=\"Repeat Password\" name=\"psw-repeat\" required>\r\n      <input type=\"checkbox\" checked=\"checked\"> Remember me\r\n      <p>By creating an account you agree to our\r\n        <a href=\"#\">Terms & Privacy</a>.</p>\r\n\r\n      <div class=\"clearfix\">\r\n        <button type=\"button\" (click)=\"close()\" id=\"cancelbtn\" class=\"cancelbtn\">Cancel</button>\r\n        <button type=\"submit\"  class=\"signupbtn\" (click)=\"sign();\">Sign Up</button>\r\n      </div>\r\n      <div class=\"Login\">\r\n        <p>Already have an account?\r\n          <a (click)=\"gologin()\">Log in</a>\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>"
 
 /***/ }),
 
@@ -673,6 +688,8 @@ module.exports = "<div class=\"modal\" id=\"modal\" (click)=\"close();\">\r\n  <
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_user__ = __webpack_require__("../../../../../src/app/models/user.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -683,11 +700,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var SignupComponent = (function () {
-    function SignupComponent() {
+    function SignupComponent(http) {
+        this.http = http;
+        this.user = new __WEBPACK_IMPORTED_MODULE_1__models_user__["a" /* User */]();
     }
-    SignupComponent.prototype.ngOnInit = function () {
-    };
     /*public close(){
       /*alert('anso');*/ /*
     (<HTMLInputElement>document.getElementById('modal')).style.display = 'none';
@@ -699,13 +718,28 @@ var SignupComponent = (function () {
         document.getElementById('modal2').style.display = 'block';
         document.getElementById('modal').style.display = 'none';
     };
+    SignupComponent.prototype.sign = function () {
+        // let name: string;
+        // name = (<HTMLInputElement>document.getElementById('firstname')).value;
+        // console.log(name);
+        this.user.firstName = document.getElementById('firstname').value;
+        this.user.lastName = document.getElementById('lastname').value;
+        this.user.email = document.getElementById('email').value;
+        this.user.password = document.getElementById('psw').value;
+        this.http.post('localhost:3000/api/', this.user)
+            .subscribe(function (res) {
+            console.log(res);
+        }, function (err) {
+            console.log(err.message);
+        });
+    };
     SignupComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'zm-signup',
             template: __webpack_require__("../../../../../src/app/signup/signup.component.html"),
             styles: [__webpack_require__("../../../../../src/app/signup/signup.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
     ], SignupComponent);
     return SignupComponent;
 }());
