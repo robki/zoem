@@ -34,7 +34,7 @@ export class SignupComponent {
         console.log(err.message);
       }
     );
-    console.log(User);
+    console.log(this.user);
   }
   
   close():void{

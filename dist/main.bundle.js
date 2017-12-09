@@ -721,7 +721,7 @@ var SignupComponent = (function () {
         }, function (err) {
             console.log(err.message);
         });
-        console.log(__WEBPACK_IMPORTED_MODULE_1__models_user__["a" /* User */]);
+        console.log(this.user);
     };
     SignupComponent.prototype.close = function () {
         document.getElementById('modal').style.display = 'none';
