@@ -5,6 +5,8 @@ import { PageComponent } from './page/page.component';
 import { CarsresultComponent } from './carsresult/carsresult.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
+
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'page'},
@@ -12,7 +14,8 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
   {path: '', component: PageComponent},
-  {path: 'carsresult', component: CarsresultComponent}
+  {path: 'carsresult', component: CarsresultComponent},
+  {path: 'account', component: AccountComponent}
 
 
 ];

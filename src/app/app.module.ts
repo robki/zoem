@@ -18,6 +18,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import {FormsModule} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     CarsresultComponent,
     LoginComponent,
     DatepickerComponent,
+    AccountComponent,
 
   ],
   imports: [
