@@ -38,8 +38,8 @@ router.get('/users', (req, res) => {
     db.collection('users')
       .find()
       .toArray()
-      .then((users) => {
-        response.data = users;
+      .then((cars) => {
+        response.data = cars;
         res.json(response);
       })
       .catch((err) => {
@@ -94,7 +94,7 @@ router.get('/user/:id', function (req, res) {
 
 // UPDATE A USER (TODO)
 
-// DELETE A USER (TODO)
+// DELETE A USER
 router.delete('/user/:id', function (req, res) {
 
   User.findByIdAndRemove(req.params.id, function (err, user) {

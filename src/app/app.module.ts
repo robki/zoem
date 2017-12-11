@@ -17,6 +17,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import {FormsModule} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './account/account.component';
 
@@ -39,6 +40,7 @@ import { AccountComponent } from './account/account.component';
     AppRoutingModule,
     NgbModule.forRoot(),
     FormsModule,
+    HttpModule,
     HttpClientModule
   ],
   providers: [HttpClientModule],

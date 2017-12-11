@@ -34,6 +34,13 @@
   </div>
 
   <div class="zm-allcars">
+    <ng-container *ngFor="let car of data.data">
+      <div id="{{car._id}}">
+        <h2>{{car.Owner}}</h2>
+        <h2>{{car.Merk}}</h2>
+        <h2>{{car.Model}}</h2>
+      </div>
+    </ng-container>
 
   </div>
 
