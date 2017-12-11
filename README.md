@@ -1,8 +1,12 @@
 # zoem
 
-Zoem is een peer-to-peer autoverhuur platform, een project voor de vakken Frontend & Backend Development van NMCT (2017-2018)
+Zoem is een peer-to-peer autoverhuur platform.  
+Een project voor de vakken Frontend & Backend Development van NMCT (2017-2018)
 
-How to run? => SET DEBUG=zoem:* & npm run dev
+How to run?!  
+"npm run run" to build angular & start node server  
+"npm run host" to start node server  
+
 
 Developers:  
 Joffrey Mahieu (joffreymahieu)  
