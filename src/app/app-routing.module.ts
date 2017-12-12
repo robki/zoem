@@ -6,7 +6,9 @@ import { CarsresultComponent } from './carsresult/carsresult.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
-
+import { MycarsComponent } from './mycars/mycars.component';
+import { AccpaymentComponent } from './accpayment/accpayment.component';
+import { CarrequestComponent } from './carrequest/carrequest.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'page'},
@@ -15,7 +17,10 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', component: PageComponent},
   {path: 'carsresult', component: CarsresultComponent},
-  {path: 'account', component: AccountComponent}
+  {path: 'account', component: AccountComponent},
+  {path: 'mycars', component: MycarsComponent},
+  {path: 'accpayment', component: AccpaymentComponent},
+  {path: 'carrequest', component: CarrequestComponent}
 
 
 ];

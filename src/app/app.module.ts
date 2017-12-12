@@ -20,6 +20,10 @@ import { HttpClient } from '@angular/common/http';
 import { HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './account/account.component';
+import { DashboardnavComponent } from './dashboardnav/dashboardnav.component';
+import { MycarsComponent } from './mycars/mycars.component';
+import { AccpaymentComponent } from './accpayment/accpayment.component';
+import { CarrequestComponent } from './carrequest/carrequest.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,10 @@ import { AccountComponent } from './account/account.component';
     LoginComponent,
     DatepickerComponent,
     AccountComponent,
+    DashboardnavComponent,
+    MycarsComponent,
+    AccpaymentComponent,
+    CarrequestComponent,
 
   ],
   imports: [

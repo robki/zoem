@@ -1,0 +1,25 @@
+.zm-fullpage{
+    width: 100%;
+    margin: 25px auto 25px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start
+}
+zm-dashboardnav{
+    background-color: #262626;
+    height: 325px;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: column;
+    color: white;
+    box-shadow: 1px 1px 1px #26262652;margin-left: 50px;   
+    width: 20%;
+  }
+  .allPayments{
+    width: 71%;
+    right: 25px;
+    background-color: #f0f0f0;
+    height: 945px;
+    box-shadow: 1px 1px 1px #26262652;
+  }
+  
