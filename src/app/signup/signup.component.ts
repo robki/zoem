@@ -25,7 +25,7 @@ export class SignupComponent {
 
 
 
-    this.http.post('http://localhost:3000/api/user', this.user)
+    this.http.post('http://localhost:3000/api/register', this.user)
     .subscribe(
       res => {
         console.log(res);

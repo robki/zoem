@@ -64,8 +64,8 @@ router.get('/cars', (req, res) => {
   });
 });
 
-// CREATES A NEW USER
-router.post('/user', function (req, res) {
+// CREATES A NEW USER (REGISTER)
+router.post('/register', function (req, res) {
 
   User.create({
       firstName: req.body.firstname,
@@ -80,7 +80,25 @@ router.post('/user', function (req, res) {
     });
 
 });
+// USER LOGIN
+router.post('/login', function (req, res) {
+  
+    User.create({
+        firstName: req.body.firstname,
+        lastName: req.body.lastname,
+        email: req.body.email,
+        password: req.body.password
+  
+      },
+      function (err, user) {
+        if (err) return res.status(500).send("There was a problem adding the information to the database.");
+        res.status(200).send(user);
+      });
+  
+  });
 
+
+  
 // GET A SINGLE USER
 router.get('/user/:id', function (req, res) {
 
