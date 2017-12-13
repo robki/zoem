@@ -34,14 +34,15 @@
   </div>
 
   <div class="zm-allcars">
-    <ng-container *ngFor="let car of data.data">
+    <div *ngFor="let car of data.data" class="car">
       <div id="{{car._id}}">
-        <h2>{{car.Owner}}</h2>
-        <h2>{{car.Merk}}</h2>
-        <h2>{{car.Model}}</h2>
+        <div id="carImage">
+          <img src="../../assets/tesla.jpg" alt="">
+        </div>
+        <div class="description">
+          <!-- <p>{{car.owner}}</p> -->
+          <p id="brand">{{car.merk}}</p>
+          <p>{{car.model}}</p>
+        </div>
       </div>
-    </ng-container>
-
-  </div>
-
-</div>
+    </div>
