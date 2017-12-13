@@ -15,18 +15,32 @@ zm-dashboardnav{
     box-shadow: 1px 1px 1px #26262652;margin-left: 50px;   
     width: 20%;
 }
+.profilepic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #262626;
+    z-index: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -100px;
+    z-index: 20;
+    box-shadow: 1px 1px 1px #26262652;
+}
 .allDetails{
     width: 71%;
     right: 25px;
     background-color: #f0f0f0;
-    height: 995px;
+    height: 1095px;
     box-shadow: 1px 1px 1px #26262652;
+    margin-top: 100px;
+    
 
 }
 .allDetails form{
     margin: 0 auto;
     width: 50%;
-   
+    display: block;
 }
 .form-control{
     width: 100%;
