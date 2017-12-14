@@ -1,13 +1,16 @@
 <div class="zm-searchnav">
   <div class="zm-searchcars">
     <div class="zm-searchplace">
-      <input type="text" placeholder="Address, airport,...">
+      <label for="">Where</label>
+      <input class="form-control"type="text" placeholder="Address, airport,...">
     </div>
     <div class="zm-searchfrom">
-      <input type="text" placeholder="From...">
+      <label for="">From</label>
+      <zm-datepicker></zm-datepicker>
     </div>
     <div class="zm-searchuntill">
-      <input type="text" placeholder="Until...">
+      <label for="">Until</label>
+      <zm-datepicker></zm-datepicker>
     </div>
     <div class="zm-searchbutton">
       <button [routerLink]="['/carsresult']">Search</button>
@@ -41,8 +44,10 @@
         </div>
         <div class="description">
           <!-- <p>{{car.owner}}</p> -->
-          <p id="brand">{{car.merk}}</p>
-          <p>{{car.model}}</p>
+          <ul>
+            <li><p id="brand">{{car.merk}}</p></li>
+            <li><p id="model">{{car.model}}</p></li>
+          </ul>
         </div>
       </div>
     </div>

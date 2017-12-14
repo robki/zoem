@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import{ Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
-
 @Component({
   selector: 'zm-carsresult',
   templateUrl: './carsresult.component.html',
   styleUrls: ['./carsresult.component.css']
+  
 })
 export class CarsresultComponent implements OnInit {
-
+  
   title = "it works!";
   private apiUrl = 'http://localhost:3000/api/cars';
   data : any ={};
@@ -30,9 +30,8 @@ export class CarsresultComponent implements OnInit {
       this.data = data;
     })
   }
+  
   ngOnInit(){
-
+    
   }
- 
-
 }

@@ -4,7 +4,7 @@
 }
 .zm-searchcars{
     width: 100%;
-    height: 75px;
+    height: 120px;
     margin: 0 auto;
     font-weight: bold;
     color: #2B16E0;
@@ -12,13 +12,20 @@
     box-shadow: 1px 1px 1px #26262652;
     
 }
-.zm-searchcars div{
+.zm-searchcars>div{
     display: inline-block;
     text-align: left;
+    margin:  5px 0 0 0;
+    height: 100px;
+
+}
+.zm-searchcars label{
+    color: white;
+    margin: 0 0 0 0;
 }
 .zm-searchcars input{
-    display: block;
-    width: 110px;
+    /*display: block;*/
+    width: 100%;
     height: 40px;
     padding: 0 5px 0 5px;
     background-color: white; 
@@ -29,15 +36,14 @@
     border: 0px;
 }
 .zm-searchplace, .zm-searchfrom, .zm-searchuntill{
-    width: 120px;
+    width: 200px;
     padding: 10px;
-    margin: 5px 5px 5px 5px;
+    margin: 0px 5px 5px 5px;
     
 }
 .zm-searchbutton{
     margin: 5px 5px 5px 5px;
-   
-    
+ 
 }
 .zm-searchbutton button{
     height: 40px;
@@ -53,7 +59,11 @@
     cursor: pointer;
 }
 .zm-searchbutton button:hover{
-    background-color: #2a2a2a
+    background-color: #2a2a2a;
+    transition-timing-function: ease;
+    -webkit-transition: 2s;
+    transition: 2s;
+
 }
 
 .zm-fullpage{
@@ -94,7 +104,19 @@
     overflow: hidden;
     background-color: white;
     height: 300px;
-    margin: 25px 0 0 0;
+    margin: 0 0 0 0;
+    cursor: pointer;
+}
+.car:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition-timing-function: ease;
+    -webkit-transition: 2s;
+    transition: 2s;
+}
+.car>div{
+    width: 100%;
+    height: 100%;
 }
 #carImage{
     height: 200px;
@@ -103,19 +125,38 @@ img{
     display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+img:hover{
+    width: 105%;
+    transition-timing-function: ease;
+    -webkit-transition: 2s;
+    transition: 2s;
 }
 .description{
     height: 100px;
     display: block;
-    width: 100%;
+    width: 100%;  
+}
+.description>ul>li p{
+    text-align: center; 
+    text-transform: uppercase;
+    text-align: center;
     
 }
-.description p{
-    margin: 2px 0 2px 0;
-    text-align: center;
-    text-transform: uppercase;
-    
+.description li{
+    list-style-type: none;
 }
 #brand{
     color: #16da00;
+    margin: 30px 0 0 0;
+}
+#description{
+    margin-top: 5px;
+}
+
+
+/*Bootstrap elements*/
+#ex1Slider .slider-selection {
+	background: #BABABA;
 }
