@@ -26,6 +26,7 @@ import { AccpaymentComponent } from './accpayment/accpayment.component';
 import { CarrequestComponent } from './carrequest/carrequest.component';
 import { CarpageComponent } from './carpage/carpage.component';
 import { AddcarComponent } from './addcar/addcar.component';
+import { MyrentalsComponent } from './myrentals/myrentals.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AddcarComponent } from './addcar/addcar.component';
     CarrequestComponent,
     CarpageComponent,
     AddcarComponent,
+    MyrentalsComponent,
 
   ],
   imports: [

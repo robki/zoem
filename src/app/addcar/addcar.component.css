@@ -1,25 +1,104 @@
-.zm-fullpage{
-    width: 100%;
-    margin: 25px auto 25px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start
+.zm-fullpage {
+  width: 100%;
+  margin: 25px auto 25px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
 }
-zm-dashboardnav{
-    background-color: #262626;
-    height: 325px;
-    margin-left: 50px;
-    margin-right: 50px;
-    flex-direction: column;
-    color: white;
-    box-shadow: 1px 1px 1px #26262652;margin-left: 50px;   
-    width: 20%;
-  }
-  .allCars{
-    width: 71%;
-    right: 25px;
-    background-color: #f0f0f0;
-    height: 945px;
-    box-shadow: 1px 1px 1px #26262652;
-  }
-  
+
+zm-dashboardnav {
+  background-color: #262626;
+  height: 325px;
+  margin-left: 50px;
+  margin-right: 50px;
+  flex-direction: column;
+  color: white;
+  box-shadow: 1px 1px 1px #26262652;
+  margin-left: 50px;
+  width: 20%;
+}
+
+h2 {
+  margin-top: 25px;
+  color: #16DA00;
+}
+
+.allCars {
+  width: 71%;
+  right: 25px;
+  background-color: #f0f0f0;
+  height: 1063px;
+  box-shadow: 1px 1px 1px #26262652;
+}
+
+.carContainer {
+  width: 50%;
+  margin: 50px auto 0 auto;
+}
+
+.vehicle div {
+  width: 32.8%;
+  display: inline-block;
+}
+
+.registration {
+  width: 100%;
+}
+
+.registration div {
+  width: 32.8%;
+}
+
+.features select {
+  width: 32.8%;
+  display: inline-block;
+}
+.location input{
+width: 65.6%;
+}
+.imageButton{
+  margin: 0;
+  background-color:  #2B16E0;
+}
+.imageButton:hover{
+  background-color: rgb(31, 16, 163);
+}
+#description {
+  width: 100%;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancelbtn,
+.saveButton {
+  float: left;
+  width: 40%;
+}
+/* .progressBar{
+width: 100%;
+background-color: white;
+height: 25px;
+margin-top: 15px;
+}
+.progress{
+width: 40%;
+background-color: #262626;
+height: 25px;
+}
+ */

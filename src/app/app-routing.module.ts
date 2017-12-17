@@ -11,6 +11,7 @@ import { AccpaymentComponent } from './accpayment/accpayment.component';
 import { CarrequestComponent } from './carrequest/carrequest.component';
 import { CarpageComponent } from './carpage/carpage.component';
 import { AddcarComponent } from './addcar/addcar.component';
+import { MyrentalsComponent } from './myrentals/myrentals.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'page'},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'accpayment', component: AccpaymentComponent},
   {path: 'carrequest', component: CarrequestComponent},
   {path: 'carpage', component: CarpageComponent},
-  {path: 'addcar', component: AddcarComponent}
+  {path: 'addcar', component: AddcarComponent},
+  {path: 'myrentals', component: MyrentalsComponent},
 ];
 
 @NgModule({

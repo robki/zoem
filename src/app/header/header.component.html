@@ -10,6 +10,9 @@
       <li>
         <a (click)="open()">Sign Up</a>
       </li>
+      <li>
+        <a [routerLink]="['/account']">Account</a>
+      </li>
     </ul>
   </div>
   <button class="zm-hamburger" id="zm-hamburger" (click)="openhamburger()">&#9776;</button>
@@ -21,7 +24,10 @@
       <a href="" [routerLink]="['/about']" (click)="closenav()">About</a>
     </li>
     <li>
-      <a (click)="open()" (click)="closenav()" >Sign Up</a>
+      <a (click)="open()" (click)="closenav()">Sign Up</a>
+    </li>
+    <li>
+      <a [routerLink]="['/account']">Account</a>
     </li>
   </ul>
 

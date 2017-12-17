@@ -2,7 +2,80 @@
   <zm-dashboardnav></zm-dashboardnav>
   <div class="allCars">
     <div class="carContainer">
-      
+      <form action="">
+        <div class="vehicle">
+          <h2>Vehicle</h2>
+          <div>
+            <label>
+              <b>Make</b>
+            </label>
+            <select class="form-control">
+              <option></option>
+            </select>
+          </div>
+          <div>
+            <label>
+              <b>Model</b>
+            </label>
+            <select class="form-control">
+              <option></option>
+            </select>
+          </div>
+          <div>
+            <label>
+              <b>Details</b>
+            </label>
+            <select class="form-control">
+              <option></option>
+            </select>
+          </div>
+          
+        </div>
+        <div class="registration">
+          <h2>Registration</h2>
+          <div>
+            <zm-datepicker></zm-datepicker>
+          </div>
+          
+        </div>
+        <div class="features">
+          <h2>Features</h2>
+          <select class="form-control">
+            <option>Seating</option>
+          </select>
+          <select class="form-control">
+            <option>Doors</option>
+          </select>
+          <select class="form-control">
+            <option>Energy</option>
+          </select>
+          <select class="form-control">
+            <option>Mileage</option>
+          </select>
+          <select class="form-control">
+            <option>Battery capacity</option>
+          </select>
+        </div>
+        <div class="location">
+          <h2>Location</h2>
+          <input class="form-control" type="text" placeholder="Address">
+        </div>
+        <div class="images">
+          <h2>Images</h2>
+         <button class="imageButton">select files...</button>
+        </div>
+        <div>
+          <h2>Description</h2>
+          <textarea class="form-control" name="description" id="description" rows="10"></textarea>
+        </div>
+        <div class="clearfix">
+          <button type="button" id="cancelbtn" class="cancelbtn">Cancel</button>
+          <button type="submit" class="saveButton">Next</button>
+        </div>
+      </form>
+      <!-- <div class="progressBar">
+        <div class="progress"></div>
+      </div> -->
     </div>
   </div>
 </div>

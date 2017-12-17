@@ -15,21 +15,21 @@ zm-dashboardnav{
     box-shadow: 1px 1px 1px #26262652;margin-left: 50px;   
     width: 20%;
   }
-  .allRequests{
+  .allRentals{
     width: 71%;
     right: 25px;
     background-color: #f0f0f0;
     height: 945px;
     box-shadow: 1px 1px 1px #26262652;
   }
-  .requestsContainer {
+  .rentalsContainer {
     width: 512px;
     height: 350px;
     margin: 0 auto;
     position: relative;
     top: 272.5px;
   }
-  .requestsInfo{
+  .rentalsInfo{
     width: 512px;
     text-align: center;
     height: 200px;
