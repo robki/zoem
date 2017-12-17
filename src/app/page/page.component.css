@@ -175,9 +175,6 @@
   font-size: 12px;
   padding: 10px 10px 10px 10px;
 }
-.zm-searchplace, .zm-searchfrom, .zm-searchuntill{
-
-}
 .zm-searchbutton{
     margin: 5px 5px 5px 5px;
    
@@ -199,8 +196,6 @@
     background-color: rgb(31, 16, 163);
 }
 @media only screen and (max-width: 840px) {
-    .zm-upimage{
-    }
     .zm-upimage image{
         height: 100%;
     }
@@ -215,9 +210,6 @@
     }
     .zm-headdesc{
         transform: none;
-    }
-
-    .zm-searchcars{
     }
 
 }
