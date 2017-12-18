@@ -28,6 +28,10 @@ import { CarpageComponent } from './carpage/carpage.component';
 import { AddcarComponent } from './addcar/addcar.component';
 import { MyrentalsComponent } from './myrentals/myrentals.component';
 
+//material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +51,7 @@ import { MyrentalsComponent } from './myrentals/myrentals.component';
     CarpageComponent,
     AddcarComponent,
     MyrentalsComponent,
+    
 
   ],
   imports: [
@@ -55,7 +60,9 @@ import { MyrentalsComponent } from './myrentals/myrentals.component';
     NgbModule.forRoot(),
     FormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

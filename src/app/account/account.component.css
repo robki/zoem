@@ -20,10 +20,9 @@ zm-dashboardnav{
     height: 200px;
     border-radius: 50%;
     background-color: #262626;
-    z-index: 20px;
     display: block;
     margin: 0 auto;
-    margin-top: -100px;
+    margin-top: 25px;
     z-index: 20;
     box-shadow: 1px 1px 1px #26262652;
 }
@@ -33,7 +32,7 @@ zm-dashboardnav{
     background-color: #f0f0f0;
     height: 1095px;
     box-shadow: 1px 1px 1px #26262652;
-    margin-top: 100px;
+    
     
 
 }

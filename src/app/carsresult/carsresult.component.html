@@ -20,22 +20,36 @@
 <div class="zm-fullpage">
   <div class="zm-carfilter">
     <div class="zm-filters">
-      <p>Sort by</p>
-      <select>
-        <option>Relevance</option>
-        <option>Price: low-high</option>
-        <option>Price: high-low</option>
-      </select>
-      <p>Price</p>
-      <p>HIER KOMT SLIDER</p>
-      <select>
-        <option>All years</option>
-        <option>Less then 5 years old</option>
-        <option>Less then 10yearls old</option>
-      </select>
+      <h3>Filters</h3>
+      <div class="filter">
+          <select class="form-control">
+            <option>Sort by</option>
+            <option>Relevance</option>
+            <option>Price: low-high</option>
+            <option>Price: high-low</option>
+          </select>
+      </div>
+      <div class="filter">
+          <label>Total price less then €{{value}}</label>
+          <mat-slider [(ngModel)]="value" min="15" max="125" step="5" value="55"></mat-slider>
+      </div>
+      <div class="filter">
+          <select class="form-control">
+              <option>Type car</option>
+              <option>Hybrid</option>
+              <option>Full electric</option>
+            </select>
+      </div>
+      <div class="filter">
+          <select class="form-control">
+              <option>All years</option>
+              <option>Less then 5 years old</option>
+              <option>Less then 10yearls old</option>
+            </select>
+      </div>
+
     </div>
   </div>
-
   <div class="zm-allcars">
     <div *ngFor="let car of data.data" class="car">
       <div [routerLink]="['/carpage']" id="{{car._id}}" >

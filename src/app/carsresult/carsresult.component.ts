@@ -30,7 +30,6 @@ export class CarsresultComponent implements OnInit {
       this.data = data;
     })
   }
-  
   ngOnInit(){
     
   }
