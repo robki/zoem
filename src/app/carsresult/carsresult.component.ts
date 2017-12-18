@@ -30,6 +30,7 @@ export class CarsresultComponent implements OnInit {
       this.data = data;
     })
   }
+  value: number = 55;
   ngOnInit(){
     
   }

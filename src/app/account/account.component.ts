@@ -10,13 +10,11 @@ export class AccountComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let numbers: Array<number>;
+    /* let numbers: Array<number>;
     numbers = [1, 2, 3]
-
     console.log(numbers);
-
-
-   
+     */
+    /*Calculation for birthday*/ 
     var minmonth = 1;
     var maxmonth = 12;
     let selectmonth = <HTMLInputElement>document.getElementById("month");
@@ -54,12 +52,15 @@ export class AccountComponent implements OnInit {
       optyear.innerHTML = ""+y;
       selectyear.appendChild(optyear);
     }
+
+    
     //TODO change amount of days with month
     /*
     function getNumberOfDays(year, month) {
       var isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
       return [31, (isLeap ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
   }*/
+
   }
 }
 

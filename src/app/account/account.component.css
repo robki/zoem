@@ -30,7 +30,7 @@ zm-dashboardnav{
     width: 71%;
     right: 25px;
     background-color: #f0f0f0;
-    height: 1095px;
+    height: 1220px;
     box-shadow: 1px 1px 1px #26262652;
     
     
@@ -48,7 +48,7 @@ zm-dashboardnav{
 label{
     display: block;
 }
-#year, #day, #month{
+#year, #day, #month, #ryear, #rday, #rmonth{
     width: 32%;
     display: inline-block;
 }
