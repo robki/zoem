@@ -14,7 +14,7 @@ export class CarsresultComponent implements OnInit {
   data : any ={};
 
   constructor(private http: Http) { 
-    console.log('Hello testing');
+    /*console.log('Hello testing');*/
     this.getData();
     this.getCars();
   }

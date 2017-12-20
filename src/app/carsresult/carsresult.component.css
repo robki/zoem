@@ -1,175 +1,202 @@
-.zm-searchnav{
-    text-align: center;
-    margin-top: 25px;
-}
-.zm-searchcars{
-    width: 100%;
-    height: 120px;
-    margin: 0 auto;
-    font-weight: bold;
-    color: #2B16E0;
-    background-color: #2a2a2a;
-    box-shadow: 1px 1px 1px #26262652;
-    
-}
-.zm-searchcars>div{
-    display: inline-block;
-    text-align: left;
-    margin:  5px 0 0 0;
-    height: 100px;
-
-}
-.zm-searchcars label{
-    color: white;
-    margin: 0 0 0 0;
-}
-.zm-searchcars input{
-    /*display: block;*/
-    width: 100%;
-    height: 40px;
-    padding: 0 5px 0 5px;
-    background-color: white; 
-    outline: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 0px;
-}
-.zm-searchplace, .zm-searchfrom, .zm-searchuntill{
-    width: 200px;
-    padding: 10px;
-    margin: 0px 5px 5px 5px;
-    
-}
-.zm-searchbutton{
-    margin: 5px 5px 5px 5px;
- 
-}
-.zm-searchbutton button{
-    height: 40px;
-    background-color: #262626;
-    color: white;
-    position: relative;
-    padding: 0px 40px;
-    border-radius: 10px;
-    /*border-bottom: 5px solid #1F10A1;*/
-    font-weight: bold;
-    text-align: center;
-    border: 0;
-    cursor: pointer;
-}
-.zm-searchbutton button:hover{
-    background-color: #2a2a2a;
-    transition-timing-function: ease;
-    -webkit-transition: 2s;
-    transition: 2s;
-
+.zm-searchnav {
+  text-align: center;
+  margin-top: 25px;
 }
 
-.zm-fullpage{
-    width: 100%;
-    margin: 25px auto 25px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start
+.zm-searchcars {
+  width: 100%;
+  height: 120px;
+  margin: 0 auto;
+  font-weight: bold;
+  color: #2B16E0;
+  background-color: #2a2a2a;
+  box-shadow: 1px 1px 1px #26262652;
 }
-.zm-carfilter{
-    width: 20%;
-    background-color: #262626;
-    height: 400px;
-    margin-left: 50px;
-    margin-right: 68px;
-    flex-direction: column;
-    color: white;
-    box-shadow: 1px 1px 1px #26262652;
-}
-.zm-filters{
-    width: 80%;
-    margin: 15px auto 0 auto;
-}
-.filter{
-    margin: 15px 0 15px 0;
-}
-h3{
-    font-size: 20px;
-}
-label{
-    margin: 0 0 0 0;
-}
-mat-slider{
-    width: 100%;
-    height: 36px;
-}
-.zm-allcars{
-    width: 70%;
-    background-color: #f0f0f0;
-    height: 1200px;
-    box-shadow: 1px 1px 1px #26262652;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
 
+.zm-searchcars>div {
+  display: inline-block;
+  text-align: left;
+  margin: 5px 0 0 0;
+  height: 100px;
 }
-.car{
-    position: relative;
-    width: 33.33%;
-    overflow: hidden;
-    background-color: white;
-    height: 300px;
-    margin: 0 0 0 0;
-    cursor: pointer;
+
+.zm-searchcars label {
+  color: white;
+  margin: 0 0 0 0;
 }
-.car:hover{
-    background-color: #f0f0f0;
-    cursor: pointer;
-    transition-timing-function: ease;
-    -webkit-transition: 2s;
-    transition: 2s;
+
+.zm-searchcars input {
+  /*display: block;*/
+  width: 100%;
+  height: 40px;
+  padding: 0 5px 0 5px;
+  background-color: white;
+  outline: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 0px;
 }
-.car>div{
-    width: 100%;
-    height: 100%;
+
+.zm-searchplace,
+.zm-searchfrom,
+.zm-searchuntill {
+  width: 200px;
+  padding: 10px;
+  margin: 0px 5px 5px 5px;
 }
-#carImage{
-    height: 200px;
+
+zm-searchmap {
+  width: 100%;
+  margin: 0 0 0 0;
 }
-img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.zm-searchbutton {
+  margin: 5px 5px 5px 5px;
 }
-img:hover{
-    width: 105%;
-    transition-timing-function: ease;
-    -webkit-transition: 2s;
-    transition: 2s;
+
+.zm-searchbutton button {
+  height: 40px;
+  background-color: #262626;
+  color: white;
+  position: relative;
+  padding: 0px 40px;
+  border-radius: 10px;
+  /*border-bottom: 5px solid #1F10A1;*/
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
 }
-.description{
-    height: 100px;
-    display: block;
-    width: 100%;  
+
+.zm-searchbutton button:hover {
+  background-color: #2a2a2a;
+  transition-timing-function: ease;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
-.description>ul>li p{
-    text-align: center; 
-    text-transform: uppercase;
-    text-align: center;
-    
+
+.zm-fullpage {
+  width: 100%;
+  margin: 25px auto 25px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
 }
-.description li{
-    list-style-type: none;
+
+.zm-carfilter {
+  width: 20%;
+  background-color: #262626;
+  height: 400px;
+  margin-left: 50px;
+  margin-right: 68px;
+  flex-direction: column;
+  color: white;
+  box-shadow: 1px 1px 1px #26262652;
 }
-#brand{
-    color: #16da00;
-    margin: 30px 0 0 0;
+
+.zm-filters {
+  width: 80%;
+  margin: 15px auto 0 auto;
 }
-#description{
-    margin-top: 5px;
+
+.filter {
+  margin: 15px 0 15px 0;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+label {
+  margin: 0 0 0 0;
+}
+
+mat-slider {
+  width: 100%;
+  height: 36px;
+}
+
+.zm-allcars {
+  width: 70%;
+  background-color: #f0f0f0;
+  height: 1200px;
+  box-shadow: 1px 1px 1px #26262652;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.car {
+  position: relative;
+  width: 33.33%;
+  overflow: hidden;
+  background-color: white;
+  height: 300px;
+  margin: 0 0 0 0;
+  cursor: pointer;
+}
+
+.car:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition-timing-function: ease;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.car>div {
+  width: 100%;
+  height: 100%;
+}
+
+#carImage {
+  height: 200px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img:hover {
+  width: 105%;
+  transition-timing-function: ease;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.description {
+  height: 100px;
+  display: block;
+  width: 100%;
+}
+
+.description>ul>li p {
+  text-align: center;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.description li {
+  list-style-type: none;
+}
+
+#brand {
+  color: #16da00;
+  margin: 30px 0 0 0;
+}
+
+#description {
+  margin-top: 5px;
 }
 
 
 /*Bootstrap elements*/
+
 #ex1Slider .slider-selection {
-	background: #BABABA;
+  background: #BABABA;
 }

@@ -12,6 +12,7 @@ import { CarrequestComponent } from './carrequest/carrequest.component';
 import { CarpageComponent } from './carpage/carpage.component';
 import { AddcarComponent } from './addcar/addcar.component';
 import { MyrentalsComponent } from './myrentals/myrentals.component';
+import { SearchmapComponent } from './searchmap/searchmap.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'page'},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'carpage', component: CarpageComponent},
   {path: 'addcar', component: AddcarComponent},
   {path: 'myrentals', component: MyrentalsComponent},
+  {path: 'searchmap', component: SearchmapComponent}
 ];
 
 @NgModule({
