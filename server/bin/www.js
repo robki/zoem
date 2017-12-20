@@ -4,13 +4,13 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../../app');
 var debug = require('debug')('mongo:server');
 var http = require('http');
 
 
-let config =require('../config');
-const DBService = require("../data/connectDBService.js");
+let config =require('../../config');
+const DBService = require("../data/connectDBService");
 DBService (config.MONGODBURL,require('mongoose') );
 
 /**

@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "run": "ng build && node ./bin/www",
-    "host": "node ./bin/www"
+    "run": "ng build && node ./server/bin/www",
+    "host": "node ./server/bin/www"
   },
   "private": true,
   "dependencies": {
