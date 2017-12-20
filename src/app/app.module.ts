@@ -15,7 +15,7 @@ import { LoginComponent } from './login/login.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DatepickerComponent } from './datepicker/datepicker.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +31,10 @@ import { MyrentalsComponent } from './myrentals/myrentals.component';
 //material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+
+//maps
+import { AgmCoreModule } from '@agm/core';
+import { SearchmapComponent } from './searchmap/searchmap.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,7 @@ import { MaterialModule } from './material.module';
     CarpageComponent,
     AddcarComponent,
     MyrentalsComponent,
+    SearchmapComponent,
     
 
   ],
@@ -62,7 +67,12 @@ import { MaterialModule } from './material.module';
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyDvJM0iKk46aj8DGlRZLGRBqoXAF_eCn_Y",
+      libraries: ["places"]
+    }),
+    ReactiveFormsModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
