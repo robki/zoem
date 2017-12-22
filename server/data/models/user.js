@@ -5,11 +5,11 @@ const Schema = mongoose.Schema;
 let emailRegExp = /.+\@.+\..+/;
 
 const userSchema  = mongoose.Schema({
-    firstName: {
+    firstname: {
         type: String,
         index: true
     },
-    lastName: {
+    lastname: {
         type: String,
         unique: true
     },
@@ -30,5 +30,6 @@ const userSchema  = mongoose.Schema({
 });
 
 mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/zoem');
 
 module.exports = mongoose.model('user', userSchema);

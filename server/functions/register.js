@@ -13,11 +13,14 @@ exports.registerUser = (firstname,lastname,email,password) =>
 
         const newUser = new user({
             firstname: firstname,
-            lastname:lastname,
+            lastname: lastname,
             email:email,
             hashed_password: hash,
             created_at: new Date()
         });
+
+        //wilt niet loggen 
+        console.log(newUser);
 
         newUser.save()
 
@@ -27,7 +30,7 @@ exports.registerUser = (firstname,lastname,email,password) =>
             if(err.code == 11000){
                 reject({ status: 409, message: 'User Already Registered !' });
             } else {
-                reject({ status: 500, message: 'Internal Server Error !' });
+                reject({ status: 500, message: err.message });
             }
         });
 

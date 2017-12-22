@@ -40,7 +40,8 @@ let response = {
   data: [],
   message: null
 };
-module.exports = router
+
+module.exports = router =>{
 // Get Users
 router.get('/getusers', (req, res) => {
   connection((db) => {
@@ -151,7 +152,7 @@ router.post('/users', (req, res) => {
   
       } else {
   
-        register.registerUser(name, email, password)
+        register.registerUser(firstname,lastname, email, password)
   
         .then(result => {
   
@@ -278,5 +279,5 @@ router.post('/users/:id/password', (req,res) => {
           }
         }
 
-module.exports = router;
+      };
       
