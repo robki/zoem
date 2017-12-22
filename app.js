@@ -12,6 +12,11 @@ var api = require('./server/routes/api');
 
 var app = express();
 
+// // view engine setup
+app.set('views', path.join(__dirname, '/server/views'));
+app.set('view engine', 'jade');
+console.log(__dirname);
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -19,14 +24,24 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'dist')));
+//app.use(express.static(path.join(__dirname, 'dist')));
+
+// Configuring Passport
+var passport = require('passport');
+var expressSession = require('express-session');
+app.use(expressSession({secret: 'mySecretKey'}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Initialize Passport
+var initPassport = require('./server/passport/init');
+initPassport(passport);
 
 
-require('./server/routes/api')(router);
-app.use("/api", router);
+app.use("/api", api);
+var routes = require('./server/routes/index')(passport);
+app.use('/', routes);
 
-// app.use('/', index);
-// app.use('/users', users);
 
 
 
