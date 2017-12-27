@@ -12,10 +12,11 @@ var api = require('./server/routes/api');
 
 var app = express();
 
-// // view engine setup
-app.set('views', path.join(__dirname, '/server/views'));
-app.set('view engine', 'jade');
-console.log(__dirname);
+//view engine setup
+// app.set('views', path.join(__dirname, '/server/views'));
+// app.set('view engine', 'jade');
+
+console.log(path.join(__dirname, '/server/views'));
 
 
 // uncomment after placing your favicon in /public
@@ -24,7 +25,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Configuring Passport
 var passport = require('passport');
@@ -40,6 +41,7 @@ initPassport(passport);
 
 app.use("/api", api);
 var routes = require('./server/routes/index')(passport);
+
 app.use('/', routes);
 
 
@@ -47,7 +49,7 @@ app.use('/', routes);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
+  res.render(path.join(__dirname, './server/views/index.jade'));
 });
 
 

@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 export class CarsresultComponent implements OnInit {
   
   title = "it works!";
-  private apiUrl = 'http://localhost:3000/api/cars';
+  private apiUrl = 'http://localhost:3000/api/getcars';
   data : any ={};
 
   constructor(private http: Http) { 
