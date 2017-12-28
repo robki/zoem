@@ -51,8 +51,9 @@
     </div>
   </div>
   <div class="zm-allcars">
-    <div *ngFor="let car of data.data" class="car">
-      <div [routerLink]="['/carpage']" id="{{car._id}}" >
+    <div *ngFor="let user of data.data" >
+      <div *ngFor="let car of user.cars" class="car">
+      <div [routerLink]="['/carpage']" id="{{car.id}}" >
         <div id="carImage">
           <img src="../../assets/tesla.jpg" alt="">
         </div>
@@ -64,4 +65,5 @@
           </ul>
         </div>
       </div>
+    </div>
     </div>
