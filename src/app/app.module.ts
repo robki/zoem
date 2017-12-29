@@ -27,7 +27,7 @@ import { CarrequestComponent } from './carrequest/carrequest.component';
 import { CarpageComponent } from './carpage/carpage.component';
 import { AddcarComponent } from './addcar/addcar.component';
 import { MyrentalsComponent } from './myrentals/myrentals.component';
-
+import { CarsService } from './services/cars.service';
 //material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
@@ -74,11 +74,11 @@ import { TypeCarFilter  } from './filters/typeCarFilter';
     MaterialModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyDvJM0iKk46aj8DGlRZLGRBqoXAF_eCn_Y",
-      libraries: ["places"]
+      libraries: ["places"]  
     }),
     ReactiveFormsModule
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, CarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

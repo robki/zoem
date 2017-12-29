@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({
 
 //Connect
 const connection = (closure) => {
-  return MongoClient.connect('mongodb://localhost:27017/zoem', (err, db) => {
+  return MongoClient.connect('mongodb://localhost:27017/zoem2', (err, db) => {
     if (err) return console.log(err);
 
     closure(db);
@@ -40,7 +40,7 @@ router.get('/getusers', (req, res) => {
       .toArray()
       .then((cars) => {
         response.data = cars;
-        res.json(response);
+        res.json(cars);
       })
       .catch((err) => {
         sendError(err, res);
@@ -56,14 +56,28 @@ router.get('/getcars', (req, res) => {
       .toArray()
       .then((users) => {
         response.data = users;
-        res.json(response);
+        res.json(users);
       })
       .catch((err) => {
         sendError(err, res);
       });
   });
 });
-
+// Get Car by id
+router.get('/getusers/:id', (req, res) => {
+  connection((db) => {
+    db.collection('users')
+      .find()
+      .toArray()
+      .then((cars) => {
+        response.data = cars;
+        res.json(cars);
+      })
+      .catch((err) => {
+        sendError(err, res);
+      });
+  });
+});
 //OLD CREATES A NEW USER (REGISTER)
 router.post('/oldregister', function (req, res) {
 
@@ -81,11 +95,10 @@ router.post('/oldregister', function (req, res) {
 
 });
 // USER LOGIN
-router.post('/login', function (req, res) {
-});
+router.post('/login', function (req, res) {});
 
 
-  
+
 // GET A SINGLE USER
 router.get('/olduser/:id', function (req, res) {
 
@@ -104,9 +117,8 @@ router.delete('/user/:id', function (req, res) {
 
   User.findByIdAndRemove(req.params.id, function (err, user) {
     if (err) return res.status(500).send("There was a problem deleting the user.");
-    res.status(200).send("User " + user.lastName + " " + user.firstName  + " was deleted.");
+    res.status(200).send("User " + user.lastName + " " + user.firstName + " was deleted.");
   });
 });
 
 module.exports = router;
-      

@@ -28,7 +28,8 @@ const routes: Routes = [
   {path: 'carpage', component: CarpageComponent},
   {path: 'addcar', component: AddcarComponent},
   {path: 'myrentals', component: MyrentalsComponent},
-  {path: 'searchmap', component: SearchmapComponent}
+  {path: 'searchmap', component: SearchmapComponent},
+  { path: 'carpage/:id', component: CarpageComponent },
 ];
 
 @NgModule({
