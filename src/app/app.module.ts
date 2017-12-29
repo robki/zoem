@@ -36,6 +36,9 @@ import { MaterialModule } from './material.module';
 import { AgmCoreModule } from '@agm/core';
 import { SearchmapComponent } from './searchmap/searchmap.component';
 
+//filters
+import { TypeCarFilter  } from './filters/typeCarFilter';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +59,7 @@ import { SearchmapComponent } from './searchmap/searchmap.component';
     AddcarComponent,
     MyrentalsComponent,
     SearchmapComponent,
+    TypeCarFilter
     
 
   ],

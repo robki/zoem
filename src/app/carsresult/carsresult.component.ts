@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{ Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { forEach } from '@angular/router/src/utils/collection';
 @Component({
   selector: 'zm-carsresult',
   templateUrl: './carsresult.component.html',
@@ -26,8 +27,8 @@ export class CarsresultComponent implements OnInit {
   }
   getCars(){
     this.getData().subscribe(data =>{
-      console.log(data);
       this.data = data;
+      console.log(data);
     })
   }
   value: number = 55;
