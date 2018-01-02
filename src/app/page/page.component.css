@@ -204,12 +204,19 @@ zm-searchmap{
     background-color: rgb(31, 16, 163);
 }
 @media only screen and (max-width: 840px) {
-    .zm-upimage image{
+    .zm-upimage{
+        /*height: 100%;*/
+        height: 500px;
+        width: auto;
+    }
+    .zm-upimage img{
         height: 100%;
+        width: auto;
     }
     .zm-imagetext{
         width: 100%;
         height: 100%;
+        
        
     }
     .zm-headtitle{
@@ -219,6 +226,35 @@ zm-searchmap{
     .zm-headdesc{
         transform: none;
     }
+    .zm-searchcars{
+        width: 220px;
+        display: block;
+    }
+    .zm-payedcars{
+        height: 786px;
+    }
+    .zm-carads{
+        display: block;
+        flex: none;
+    }
+    .zm-halfl{
+        float: none;
+        width: 100%;
+    }
+    .zm-halfr{
+        display: none;
+    }
+    .zm-join{
+        width: 100%;
+        height: 200px;
+        overflow: unset;
+        background-size: auto 100%;
+    }
+
+    .zm-jointext{
+        margin-top: 25px;
+    }
+    
 
 }
 
