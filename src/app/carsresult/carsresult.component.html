@@ -73,9 +73,9 @@
     </div> -->
       <div *ngFor="let user of userCars" class="user">
         <div *ngFor="let car of user.cars" class="car">
-            <div [routerLink]="['/carpage']" id="{{car.id}}">
+            <div routerLink="/carpage/{{car.id}}" id="{{car.id}}">
               <div id="carImage">
-                <img src="../../assets/tesla.jpg" alt="">
+                <img src="../../assets/{{car.images}}" alt="">
               </div>
               <div class="description">
                 <!-- <p>{{car.owner}}</p> -->

@@ -31,7 +31,6 @@ export class CarsresultComponent implements OnInit {
   /*getData(){
     return this.http.get(this.apiUrl)
       .map((res:Response) => res.json())
-
   }
   getCars(){
     this.getData().subscribe(data =>{
@@ -41,7 +40,7 @@ export class CarsresultComponent implements OnInit {
   }*/
   value: number = 55;
   getCars(){
-    console.log('hallo2');
+    //console.log('hallo2');
     this.carsService.getCars()
     .subscribe(userCars => this.userCars = userCars);
   }

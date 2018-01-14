@@ -67,7 +67,7 @@ router.get('/getcars', (req, res) => {
 router.get('/getusers/:id', (req, res) => {
   connection((db) => {
     db.collection('users')
-      .find()
+      .find({"id": req.params.id})
       .toArray()
       .then((cars) => {
         response.data = cars;

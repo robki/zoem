@@ -8,9 +8,9 @@
   </div>
   <div class="allInfo">
     <div class="infoContainer">
-        <div *ngIf="userCar">
-            <h2>{{ userCars.user | uppercase }} Details</h2>
-            <div><span>id: </span>{{userCars.cars.id}}</div>
+        <div *ngIf="userCars">
+            <h2>{{ userCars[0].cars[0].make }} - {{ userCars[0].cars[0].model }}</h2>
+            <img src="../../assets/{{userCars[0].cars[0].images}}">
           </div> 
       
     </div>

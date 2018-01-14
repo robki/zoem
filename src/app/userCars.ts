@@ -1,10 +1,11 @@
 export class UserCars{
+    id: number;
     email: string;
     firstname: string;
     lastname: string;
     password: string;
     cars:[{
-        carid: number;
+        id: number;
         make: string;
         model: string;
         type: string;

@@ -20,9 +20,12 @@ export class CarpageComponent implements OnInit {
   } 
   getCar(){
     const id = +this.route.snapshot.paramMap.get('id');
+    console.log(id);
     this.carsService.getCar(id)
       .subscribe(car => this.userCars = car);
-    console.log(this.userCars);
+    //console.log(this.userCars);
+    
+  
   }
   
   ngOnInit() {
