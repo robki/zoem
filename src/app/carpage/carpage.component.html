@@ -9,8 +9,23 @@
   <div class="allInfo">
     <div class="infoContainer">
         <div *ngIf="userCars">
-            <h2>{{ userCars[0].cars[0].make }} - {{ userCars[0].cars[0].model }}</h2>
-            <img src="../../assets/{{userCars[0].cars[0].images}}">
+            <div class="gallery">
+              <img src="../../assets/{{userCars[0].cars[0].images}}">
+            </div>
+            <h2 id="titleCar">{{ userCars[0].cars[0].make }} - {{ userCars[0].cars[0].model }}</h2>
+            <div class="detailsContainer">
+                <div class="details">
+                    <p><span>Type </span>{{userCars[0].cars[0].type}}</p>
+                    <p><span>Mileage </span>{{userCars[0].cars[0].mileage}} km</p>
+                    <p><span>Battery capacity </span>{{userCars[0].cars[0].batterycapacity}} kWh</p>
+                    <p><span>Seating </span>{{userCars[0].cars[0].seating}}</p>
+                    <p><span>Doors </span>{{userCars[0].cars[0].doors}}</p>
+                  </div>
+                  <div class="map">
+                    <h2>HERE COMES GOOGLE MAP</h2>
+                  </div>
+            </div>
+            
           </div> 
       
     </div>
