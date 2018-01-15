@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({
 
 //Connect
 const connection = (closure) => {
-  return MongoClient.connect('mongodb://localhost:27017/zoem2', (err, db) => {
+  return MongoClient.connect('mongodb://zoem:zoem123456@ds251727.mlab.com:51727/zoem', (err, db) => {
     if (err) return console.log(err);
 
     closure(db);
