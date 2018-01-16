@@ -12,6 +12,8 @@ import { Input } from '@angular/core';
   styleUrls: ['./carpage.component.css'],
 })
 export class CarpageComponent implements OnInit {
+  lat: number = 50.827730;
+  lng: number = 3.262274;
   @Input() userCars: UserCars;
   constructor(private route: ActivatedRoute,
     private carsService: CarsService,
@@ -23,9 +25,8 @@ export class CarpageComponent implements OnInit {
     console.log(id);
     this.carsService.getCar(id)
       .subscribe(car => this.userCars = car);
-    //console.log(this.userCars);
-    
-  
+    console.log(this.userCars);
+
   }
   
   ngOnInit() {

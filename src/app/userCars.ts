@@ -14,7 +14,8 @@ export class UserCars{
         doors: number;
         mileage: number;
         batterycapacity: number;
-        location: string;
+        lat: number;
+        lng: number;
         images: string;
         description: string;
         available: string; 

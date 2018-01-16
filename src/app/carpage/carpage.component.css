@@ -97,3 +97,6 @@
   width: 50%;
   color: white;
 }
+agm-map {
+  height: 300px;
+}
