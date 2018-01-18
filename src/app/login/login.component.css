@@ -59,17 +59,15 @@ button {
 }
 
 /* The Close Button (x) */
-.close {
+.closebtn {
     position: absolute;
-    right: 35px;
-    top: 15px;
-    color: #000;
-    font-size: 40px;
-    font-weight: bold;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
 }
 
-.close:hover,
-.close:focus {
+.closebtn:hover,
+.closebtn:focus {
     color: red;
     cursor: pointer;
 }

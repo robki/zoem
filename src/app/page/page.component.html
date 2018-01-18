@@ -1,16 +1,19 @@
 
-<div class="zm-upimage" (click)="close()">
-  <img src="../../assets/inside_Car.jpg">
+<div class="zm-upimage">
+  <!-- <img src="../../assets/inside_Car.jpg"> -->
+  <video playsinline autoplay muted loop>
+    <source src="../../assets/blurrycars.mp4" type="video/mp4"> 
+  </video>
   <div class="zm-imagetext">
     <div class="zm-headtxt">
         <h1 class="zm-headtitle">Lorem ipsum</h1>
         <p class="zm-headdesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
     </div>
-    <form action="/" class="zm-searchcars">
+    <!-- <form action="/" class="zm-searchcars">
       <div class="zm-searchplace">
         <label for="">Where</label>
-        <!-- <input class="form-control"type="text" placeholder="Address, airport,..."> -->
-        <zm-searchmap></zm-searchmap>
+        <input class="form-control"type="text" placeholder="Address, airport,..."> -->
+       <!--  <zm-searchmap></zm-searchmap>
       </div>
       <div class="zm-searchfrom">
         <label for="">From</label>
@@ -19,13 +22,15 @@
       <div class="zm-searchuntill">
         <label for="">Until</label>
         <zm-datepicker></zm-datepicker>
-      </div>
-      <div class="zm-searchbutton">
+      </div> -->
+     <!--  <div class="zm-searchbutton">
         <button [routerLink]="['/carsresult']">Search</button>
       </div>
 
-
-    </form>
+    </form> -->
+    <div class="zm-rentbtn">
+      <button routerLink="/carsresult">Start renting</button>
+    </div>
   </div>
 
 </div>

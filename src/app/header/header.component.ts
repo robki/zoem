@@ -30,5 +30,11 @@ export class HeaderComponent implements OnInit {
   open():void{
     (<HTMLInputElement>document.getElementById('modal')).style.display = 'block';
   }
-  
+  /* Open when someone clicks on the span element */
+  openNav():void{
+    (<HTMLInputElement>document.getElementById('myNav')).style.height = '100%';
+  }
+  closeNav():void{
+    (<HTMLInputElement>document.getElementById('myNav')).style.height = '0%';
+  }
 }

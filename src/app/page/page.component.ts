@@ -11,7 +11,4 @@ export class PageComponent implements OnInit {
 
   ngOnInit() {
   }
-  close():void{
-    (<HTMLInputElement>document.getElementById('modal')).style.display = 'none';
-  }
 }
