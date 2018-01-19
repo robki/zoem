@@ -1,6 +1,5 @@
 .zm-upimage {
     height: 400px;
-    /*width: 100%;*/
     overflow: hidden;
     display: block;
     margin-top: 25px;
@@ -10,7 +9,6 @@
     box-shadow: 1px 1px 1px #26262652;
 }
 .zm-upimage img{
-    /*position: relative;*/
     width: 100%;
 }
 .zm-imagetext{
@@ -37,8 +35,6 @@
 .zm-member{
     height: 350px;
     width: 300px;
-    /*width: 40%;
-    height: 45%;*/
     text-align: center;
 
 }

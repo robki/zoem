@@ -12,28 +12,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     
   }
-  openhamburger():void{
-    (<HTMLInputElement>document.getElementById('zm-hamburger')).style.display = 'none';
-    (<HTMLInputElement>document.getElementById('zm-cross')).style.display = 'block';
-    (<HTMLInputElement>document.getElementById('zm-menu-mob')).style.display = 'block';
-  }
-  closenav():void{
-    (<HTMLInputElement>document.getElementById('zm-menu-mob')).style.display = 'none';
-    (<HTMLInputElement>document.getElementById('zm-cross')).style.display = 'none';
-    (<HTMLInputElement>document.getElementById('zm-hamburger')).style.display = 'block';
-
-  }
-  test():void{
-    console.log("worksss")
-
-}
+  //show registercomponent on click in header
   open():void{
     (<HTMLInputElement>document.getElementById('modal')).style.display = 'block';
   }
-  /* Open when someone clicks on the span element */
+  //show the navigation with 'animation'
   openNav():void{
     (<HTMLInputElement>document.getElementById('myNav')).style.height = '100%';
   }
+  //close the navigation
   closeNav():void{
     (<HTMLInputElement>document.getElementById('myNav')).style.height = '0%';
   }

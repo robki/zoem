@@ -29,7 +29,7 @@ import { AddcarComponent } from './addcar/addcar.component';
 import { MyrentalsComponent } from './myrentals/myrentals.component';
 import { CarsService } from './services/cars.service';
 //material
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/*import { BrowserAnimationsModule } from '@angular/platform-browser/animations';*/
 import { MaterialModule } from './material.module';
 
 //maps
@@ -70,7 +70,7 @@ import { TypeCarFilter  } from './filters/typeCarFilter';
     FormsModule,
     HttpModule,
     HttpClientModule,
-    BrowserAnimationsModule,
+    /*BrowserAnimationsModule,*/
     MaterialModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyDvJM0iKk46aj8DGlRZLGRBqoXAF_eCn_Y",

@@ -18,29 +18,15 @@ import 'rxjs/add/operator/map';
 export class CarsresultComponent implements OnInit {
   userCars: UserCars[];
 
-  /*title = "it works!";
-  private apiUrl = 'http://localhost:3000/api/getusers';
-  data : any ={};
-*/
+  
   constructor(/*private http: Http*/ private carsService: CarsService) { 
-    /*console.log('Hello testing');*/
-    /*this.getData();
-    this.getCars();*/
+ 
   }
-
-  /*getData(){
-    return this.http.get(this.apiUrl)
-      .map((res:Response) => res.json())
-  }
-  getCars(){
-    this.getData().subscribe(data =>{
-      this.data = data;
-      console.log(data);
-    })
-  }*/
+  // Start value of price range
   value: number = 55;
+
+  //get all the cars
   getCars(){
-    //console.log('hallo2');
     this.carsService.getCars()
     .subscribe(userCars => this.userCars = userCars);
   }

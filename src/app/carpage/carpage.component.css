@@ -29,10 +29,7 @@
   background-color: #16DA00;
   color: #FFF;
   position: relative;
-  /*padding: 0px 40px;
-    */
   border-radius: 10px;
-  /*border-bottom: 5px solid #1F10A1;*/
   font-weight: bold;
   text-align: center;
   border: 0;
@@ -52,7 +49,7 @@
   width: 71%;
   right: 25px;
   background-color: #f0f0f0;
-  height: 945px;
+  height: 800px;
   box-shadow: 1px 1px 1px #26262652;
 }
 .gallery{

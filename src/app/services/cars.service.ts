@@ -14,7 +14,7 @@ export class CarsService {
   private apiUrl = 'http://localhost:3000/api/getusers';
   constructor(private http: HttpClient) { }
 
-  
+  //get all the cars 
   getCars (): Observable<UserCars[]> {
     return this.http.get<UserCars[]>(this.apiUrl)
       .pipe(
@@ -24,14 +24,13 @@ export class CarsService {
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
  
-      // TODO: send the error to remote logging infrastructure
+     
       console.error(error); // log to console instead
  
-      // Let the app keep running by returning an empty result.
       return of(result as T);
     };
   }
-
+  //error
   getCarNo404<Data>(id: number): Observable<UserCars>{
     const url = `${this.apiUrl}/?id=${id}`;
     return this.http.get<UserCars[]>(url)
@@ -44,7 +43,7 @@ export class CarsService {
       catchError(this.handleError<UserCars>(`getCar id=${id}`))
     );
   }
-
+  //get car by id
   getCar(id: number): Observable<UserCars>{
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<UserCars>(url).pipe(

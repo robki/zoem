@@ -5,6 +5,7 @@ import { UserCars } from '../userCars';
     name: 'myfilter',  
     pure: false  
 })
+//TODO filter displayed cars
 export class TypeCarFilter implements PipeTransform {  
     transform(items: any[], filter: UserCars): any {  
         if (!items || !filter) {  

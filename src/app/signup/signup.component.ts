@@ -14,7 +14,7 @@ export class SignupComponent {
   constructor(private http:HttpClient){
     this.user = new User();
   }
- 
+ //TODO registration
   public user: User;
   sign():void{
 
@@ -36,10 +36,12 @@ export class SignupComponent {
     );
     console.log(this.user);
   }
+  //close the registration
   
   close():void{
     (<HTMLInputElement>document.getElementById('modal')).style.display = 'none';
   }
+  //show login and hide registration
   gologin():void{
     (<HTMLInputElement>document.getElementById('modal2')).style.display = 'block';
     (<HTMLInputElement>document.getElementById('modal')).style.display = 'none';

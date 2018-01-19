@@ -6,8 +6,10 @@
   </div>
   <div class="zm-footernav">
     <h4>Navigation</h4>
-    <a href="/" [routerLink]="['/about']">About</a>
-    <a href="/" [routerLink]="['/signup']">Register</a>
+    <a routerLink="/">Home</a>
+    <a routerLink="/about">About</a>
+    <a (click)="open()">Sign Up</a>
+    <a routerLink="/account">Account</a>
   </div>
   <div class="zm-social">
     <h4>Follow us</h4>

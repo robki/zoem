@@ -6,7 +6,6 @@ h4{
     background-color: #2a2a2a;
     height: 200px;
     width: 100%;
-    /*box-shadow: inset 0px 11px 10px -10px #262626;*/
     display: flex;
     justify-content: center;
 
@@ -22,6 +21,7 @@ h4{
 }
 .zm-footernav a, .zm-social a{
     display: block;
+    color: white
 }
 .zm-social img{
     width: 5%;

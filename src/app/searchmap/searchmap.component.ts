@@ -20,8 +20,7 @@ export class SearchmapComponent implements OnInit {
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone
   ) { }
-
-  ngOnInit() {
+  geolocation(): void {
     //set google maps defaults
     this.zoom = 4;
     this.latitude = 39.8282;
@@ -56,7 +55,6 @@ export class SearchmapComponent implements OnInit {
       });
     });
   }
-
   private setCurrentPosition() {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -65,6 +63,9 @@ export class SearchmapComponent implements OnInit {
         this.zoom = 12;
       });
     }
+  }
+  ngOnInit() {
+
   }
 }
 

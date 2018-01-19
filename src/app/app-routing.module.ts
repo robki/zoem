@@ -25,7 +25,6 @@ const routes: Routes = [
   {path: 'mycars', component: MycarsComponent},
   {path: 'accpayment', component: AccpaymentComponent},
   {path: 'carrequest', component: CarrequestComponent},
-  {path: 'carpage', component: CarpageComponent},
   {path: 'addcar', component: AddcarComponent},
   {path: 'myrentals', component: MyrentalsComponent},
   {path: 'searchmap', component: SearchmapComponent},

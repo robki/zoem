@@ -12,6 +12,7 @@ import { Input } from '@angular/core';
   styleUrls: ['./carpage.component.css'],
 })
 export class CarpageComponent implements OnInit {
+  //hardcoded maps values
   lat: number = 50.827730;
   lng: number = 3.262274;
   @Input() userCars: UserCars;
@@ -20,6 +21,7 @@ export class CarpageComponent implements OnInit {
     private location: Location) {
 
   } 
+  //get the car from its id
   getCar(){
     const id = +this.route.snapshot.paramMap.get('id');
     console.log(id);
