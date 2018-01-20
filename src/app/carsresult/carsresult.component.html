@@ -1,4 +1,5 @@
-<div class="zm-searchnav">
+<div class="zm-searchnav" id="searchnav">
+  <span (click)="closeFilter()" class="closebtn">&times;</span>
   <div class="zm-searchcars">
     <div class="zm-searchplace">
       <label for="">Where</label>
@@ -17,9 +18,14 @@
     </div>
   </div>
 </div>
+<div id="filtersButton">
+  <button class="sortbtn" (click)="openSort()">Sort</button>
+  <button class="filterbtn" (click)="openFilter()">Filter</button>
+</div>
 <div class="zm-fullpage">
-  <div class="zm-carfilter">
-    <div class="zm-filters">
+  <div id="zm-carfilter">
+    <div id="zm-filters">
+      <span (click)="closeSort()" class="closeSortbtn">&times;</span>
       <h3>Filters</h3>
       <div class="filter">
         <select class="form-control">
@@ -47,30 +53,32 @@
           <option>Less then 10yearls old</option>
         </select>
       </div>
+      <div class="zm-applybutton">
+        <button>Apply</button>
+      </div>
 
     </div>
   </div>
   <div class="zm-carsContainer">
-      <div class="zm-allcars">
-          <div *ngFor="let user of userCars" class="user">
-            <div *ngFor="let car of user.cars" class="car">
-                <div routerLink="/carpage/{{car.id}}" id="{{car.id}}">
-                  <div id="carImage">
-                    <img src="../../assets/{{car.images}}" alt="">
-                  </div>
-                  <div class="description">
-                    <ul>
-                      <li>
-                        <p id="brand">{{car.make}}</p>
-                      </li>
-                      <li>
-                        <p id="model">{{car.model}}</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+    <div class="zm-allcars">
+      <div *ngFor="let user of userCars" class="user">
+        <div *ngFor="let car of user.cars" class="car">
+          <div routerLink="/carpage/{{car.id}}" id="{{car.id}}">
+            <div id="carImage">
+              <img src="../../assets/{{car.images}}" alt="">
+            </div>
+            <div class="description">
+              <ul>
+                <li>
+                  <p id="brand">{{car.make}}</p>
+                </li>
+                <li>
+                  <p id="model">{{car.model}}</p>
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
       </div>
+    </div>
   </div>
- 

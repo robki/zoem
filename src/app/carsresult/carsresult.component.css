@@ -1,4 +1,4 @@
-.zm-searchnav {
+#searchnav {
   text-align: center;
   margin-top: 25px;
 }
@@ -53,11 +53,13 @@ zm-searchmap {
 .zm-searchbutton {
   margin: 5px 5px 5px 5px;
 }
-
+.zm-applybutton{
+  text-align: center;
+}
 .zm-searchbutton button {
   height: 40px;
-  background-color: #262626;
-  color: white;
+  background-color: #eaecef;
+  color: #2a2a2a;
   position: relative;
   padding: 0px 40px;
   border-radius: 10px;
@@ -66,8 +68,19 @@ zm-searchmap {
   border: 0;
   cursor: pointer;
 }
-
-.zm-searchbutton button:hover {
+.zm-applybutton button{
+  height: 40px;
+  background-color: #eaecef;
+  color: #2a2a2a;
+  position: relative;
+  padding: 0px 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+.zm-searchbutton button:hover, .zm-applybutton button:hover {
   background-color: #2a2a2a;
   transition-timing-function: ease;
   -webkit-transition: 2s;
@@ -82,7 +95,7 @@ zm-searchmap {
   justify-content: flex-start
 }
 
-.zm-carfilter {
+#zm-carfilter {
   width: 20%;
   background-color: #262626;
   height: 400px;
@@ -93,7 +106,7 @@ zm-searchmap {
   box-shadow: 1px 1px 1px #26262652;
 }
 
-.zm-filters {
+#zm-filters {
   width: 80%;
   margin: 15px auto 0 auto;
 }
@@ -114,12 +127,14 @@ mat-slider {
   width: 100%;
   height: 36px;
 }
-.zm-carsContainer{
+
+.zm-carsContainer {
   width: 70%;
   background-color: #f0f0f0;
   height: 1200px;
   box-shadow: 1px 1px 1px #26262652;
 }
+
 .zm-allcars {
   height: 600px;
   display: flex;
@@ -127,7 +142,8 @@ mat-slider {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.user{
+
+.user {
   position: relative;
   width: 33.33%;
   overflow: hidden;
@@ -136,9 +152,10 @@ mat-slider {
   margin: 0 0 0 0;
   cursor: pointer;
 }
+
 .car {
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .car:hover {
@@ -202,4 +219,82 @@ img:hover {
 
 #ex1Slider .slider-selection {
   background: #BABABA;
+}
+
+#filtersButton {
+  display: none;
+}
+
+.closebtn,.closeSortbtn {
+  display: none;
+}
+#applybtn{
+  display: none;
+}
+@media only screen and (max-width: 840px) {
+  #zm-filters {
+    display: block;
+  }
+  #searchnav {
+    display: none;
+    z-index: 100000;
+  }
+  .zm-searchcars {
+    height: 300px;
+  }
+  .zm-searchcars>div {
+    display: block;
+    text-align: center;
+    height: 70px;
+    margin: 0 auto;
+  }
+  #zm-carfilter {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: none;
+
+  }
+  mat-slider{
+    width: 90%;
+  }
+  .zm-searchbutton button {
+    margin-top: 25px;
+  }
+  #filtersButton {
+    display: inline-block;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .filterbtn ,.sortbtn {
+    padding: 5px 40px 5px 40px;
+    background-color: #262626;
+    color: white;
+    border: none;
+    margin: 10px 10px 0px 10px;
+    border-radius: 5px;
+  }
+  .zm-carsContainer {
+    width: 100%;
+    height: 1800px;
+  }
+  .zm-fullpage {
+    flex-direction: column;
+  }
+  .user {
+    width: 90%;
+  }
+  .closebtn,.closeSortbtn {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    font-size: 40px;
+    color: white;
+  }
+
+  #applybtn{
+    display: none;
+  }
 }

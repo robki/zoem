@@ -45,19 +45,29 @@ a, p{
     .zm-footer{
         display: block;
         width: 100%;
-        height: 350px;
+        height: 395px;
     }
-    .zm-footercopy p{
-        padding: 15px 0 0 0;
-    }
-    .zm-info, .zm-footernav, .zm-social{
-        height: 110px;
+   
+    .zm-info{
+        height: 100px;
         margin: 0 auto;
         width: 100%;
 
     }
+    .zm-footernav{
+        height: 140px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .zm-social{
+        height: 140px;
+        width: 100%;
+    }
     .zm-social img{
         width: 10%;
         margin: 0 15px 0 15px;
+    }
+    .zm-footercopy p{
+        padding: 15px 0 0 0;
     }
 }

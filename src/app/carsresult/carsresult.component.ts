@@ -38,4 +38,22 @@ export class CarsresultComponent implements OnInit {
   onSelect(userCars: UserCars){
     this.selectedCar = userCars;
   }
+  closeFilter():void{
+    (<HTMLInputElement>document.getElementById('searchnav')).style.display = 'none';
+    (<HTMLInputElement>document.getElementById('filtersButton')).style.display = 'block'; 
+  }
+  openFilter():void{
+    (<HTMLInputElement>document.getElementById('searchnav')).style.display = 'block';
+    (<HTMLInputElement>document.getElementById('filtersButton')).style.display = 'none'; 
+  }
+  openSort():void{
+    (<HTMLInputElement>document.getElementById('zm-carfilter')).style.display = 'block';
+    (<HTMLInputElement>document.getElementById('filtersButton')).style.display = 'none';
+  }
+  closeSort():void{
+    (<HTMLInputElement>document.getElementById('zm-carfilter')).style.display = 'none';
+    (<HTMLInputElement>document.getElementById('filtersButton')).style.display = 'block';
+  }
+
+  
 }

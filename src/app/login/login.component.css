@@ -3,8 +3,9 @@ input[type=text], input[type=password] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: none;
     box-sizing: border-box;
+    background-color: rgb(235, 232, 232);
 }
 .Login a{
     color: #2B16E0;
@@ -48,7 +49,7 @@ button {
     /*background-color: #fefefe;*/
     /*background-image: url("../../assets/connect.png");
     background-repeat: repeat; */
-    background-color: #f0f0f0;
+    background-color: white;
     box-shadow: 1px 1px 1px #26262652;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     /*border: 1px solid #888;*/
@@ -80,10 +81,14 @@ button {
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
+@media screen and (max-width: 840px) {
+    .cancelbtn,.signupbtn, .loginbtn{
         width: 100%;
     }
+    .modal-content{
+        width: 90%;
+    }
+
 }
 #id02{
     z-index: 10;

@@ -33,7 +33,7 @@
     position: relative;
     -webkit-animation: myfirst 2s;
     -webkit-animation-direction: alternate-reverse;
-    animation: myfirst 3s;
+    animation: myfirst 2s;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
     -webkit-animation-iteration-count: infinite;
@@ -147,7 +147,7 @@ zm-searchmap{
 }
 .zm-containersplit{
     /*margin-top: 50px;*/
-    margin: 100px 50px 0 50px;
+    margin: 100px 50px -17px 50px;
     height: 50vh;
     transition: transform .6s .9s;
 }
@@ -186,7 +186,7 @@ zm-searchmap{
    margin-top: 80px;
 }
 .zm-joinbutton a{
-    background-color: #2B16E0;
+    background-color: #16DA00;
     color: #FFF;
     position: relative;
     padding: 20px 40px;
@@ -196,10 +196,14 @@ zm-searchmap{
     
 }
 .zm-joinbutton a:active{
-    background-color: rgb(31, 16, 163)
+    background-color: #16DA00;
+    transition: .5s ease;
+    opacity: 0.3;
 }
 .zm-joinbutton a:hover{
-    background-color: rgb(31, 16, 163);
+    background-color: #16DA00;
+    transition: .5s ease;
+    opacity: 0.3;
 }
 .zm-searchcars{
     width: 900px;
@@ -222,21 +226,6 @@ zm-searchmap{
     margin: 5px 5px 5px 5px;
    
     
-}
-.zm-searchbutton button{
-    height: 40px;
-    background-color: #2B16E0;
-    color: #FFF;
-    position: relative;
-    padding: 0px 40px;
-    border-radius: 4px;
-    font-weight: bold;
-    text-align: center;
-    border: 0;
-    cursor: pointer;
-}
-.zm-searchbutton button:hover{
-    background-color: rgb(31, 16, 163);
 }
 .zm-rentbtn{
     margin: 5px 5px 5px 5px;
@@ -269,9 +258,10 @@ zm-searchmap{
     }
     .zm-imagetext{
         width: 100%;
-        height: 100%;
-        
-       
+        height: 100%;   
+    }
+    .zm-headtxt{
+        margin-top: 30%;
     }
     .zm-headtitle{
         transform: none;
@@ -285,7 +275,7 @@ zm-searchmap{
         display: block;
     }
     .zm-payedcars{
-        height: 786px;
+        height: 100%;
     }
     .zm-carads{
         display: block;
@@ -300,13 +290,14 @@ zm-searchmap{
     }
     .zm-join{
         width: 100%;
-        height: 200px;
+        min-height: 500px;
         overflow: unset;
         background-size: auto 100%;
+        margin-bottom: -20px;
     }
-
     .zm-jointext{
         margin-top: 25px;
+        padding-top: 70px;
     }
     
 
