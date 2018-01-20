@@ -4,11 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-const router = express.Router();
 
 var index = require('./server/routes/index');
 var users = require('./server/routes/users');
 var api = require('./server/routes/api');
+
 
 var app = express();
 
@@ -26,29 +26,24 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Configuring Passport
-var passport = require('passport');
-var expressSession = require('express-session');
-app.use(expressSession({secret: 'mySecretKey'}));
-app.use(passport.initialize());
-app.use(passport.session());
-
-// Initialize Passport
-var initPassport = require('./server/passport/init');
-initPassport(passport);
+// // Configuring Passport
+// var passport = require('passport');
+// var expressSession = require('express-session');
+// app.use(expressSession({secret: 'mySecretKey'}));
+// app.use(passport.initialize());
+// app.use(passport.session());
+// // Initialize Passport
+// var initPassport = require('./server/passport/init');
+// initPassport(passport);
 
 
 app.use("/api", api);
-var routes = require('./server/routes/index')(passport);
-
-app.use('/', routes);
-
-
+app.use('/', index);
 
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.render(path.join(__dirname, './server/views/index.jade'));
+  res.render("./dist/index.html")
 });
 
 
