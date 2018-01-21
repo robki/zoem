@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -78,7 +78,7 @@ import { TypeCarFilter  } from './filters/typeCarFilter';
     }),
     ReactiveFormsModule
   ],
-  providers: [HttpClientModule, CarsService],
+  providers: [HttpClientModule, CarsService, { provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
