@@ -6,7 +6,9 @@
   left: 0;
   z-index: 200;
 }
-
+#myNav{
+  z-index: 10000;
+}
 .zm-logo {
   display: block;
   position: absolute;

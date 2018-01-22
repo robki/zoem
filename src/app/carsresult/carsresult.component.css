@@ -256,7 +256,7 @@ img:hover {
 
   }
   mat-slider{
-    width: 90%;
+    width: 100%;
   }
   .zm-searchbutton button {
     margin-top: 25px;
@@ -283,7 +283,7 @@ img:hover {
     flex-direction: column;
   }
   .user {
-    width: 90%;
+    width: 100%;
   }
   .closebtn,.closeSortbtn {
     display: block;

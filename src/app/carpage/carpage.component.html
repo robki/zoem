@@ -1,35 +1,66 @@
 <div class="zm-fullpage">
   <div class="zm-sideInfo">
     <div class="zm-info">
+      <div class="rentInfo">
+        <div class="zm-searchplace">
+          <label for="">Where</label>
+          <zm-searchmap></zm-searchmap>
+        </div>
+        <div class="zm-searchfrom">
+          <label for="">From</label>
+          <zm-datepicker></zm-datepicker>
+        </div>
+        <div class="zm-searchuntill">
+          <label for="">Until</label>
+          <zm-datepicker></zm-datepicker>
+        </div>
+      </div>
       <div class="zm-bookbutton">
+        <p class="rentPrice"><span>€ {{ userCars[0].cars[0].price }}</span> /day</p>
         <button>Book</button>
       </div>
     </div>
   </div>
   <div class="allInfo">
     <div class="infoContainer">
-        <div *ngIf="userCars">
-            <div class="gallery">
-              <img src="../../assets/{{userCars[0].cars[0].images}}">
+      <div *ngIf="userCars">
+        <div class="gallery">
+          <img src="../../assets/{{userCars[0].cars[0].images}}">
+        </div>
+        <h2 id="titleCar">{{ userCars[0].cars[0].make }} - {{ userCars[0].cars[0].model }}</h2>
+        <div class="detailsContainer">
+          <div class="details">
+            <div class="detail">
+              <p class="detailTitle">Type</p>
+              <p class="detailValue">{{userCars[0].cars[0].type}}</p>
             </div>
-            <h2 id="titleCar">{{ userCars[0].cars[0].make }} - {{ userCars[0].cars[0].model }}</h2>
-            <div class="detailsContainer">
-                <div class="details">
-                    <p><span>Type </span>{{userCars[0].cars[0].type}}</p>
-                    <p><span>Mileage </span>{{userCars[0].cars[0].mileage}} km</p>
-                    <p><span>Battery capacity </span>{{userCars[0].cars[0].batterycapacity}} kWh</p>
-                    <p><span>Seating </span>{{userCars[0].cars[0].seating}}</p>
-                    <p><span>Doors </span>{{userCars[0].cars[0].doors}}</p>
-                  </div>
-                  <div class="map">
-                    <agm-map [latitude]="lat" [longitude]="lng">
-                      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                    </agm-map>
-                  </div>
+            <div class="detail">
+              <p class="detailTitle">Mileage</p>
+              <p class="detailValue">{{userCars[0].cars[0].mileage}} km</p>
             </div>
-            
-          </div> 
-      
+            <div class="detail">
+              <p class="detailTitle">Battery capacity</p>
+              <p class="detailValue">{{userCars[0].cars[0].batterycapacity}} kWh</p>
+            </div>
+            <div class="detail">
+              <p class="detailTitle">Seating</p>
+              <p class="detailValue">{{userCars[0].cars[0].seating}}</p>
+            </div>
+            <div class="detail">
+              <p class="detailTitle">Doors</p>
+              <p class="detailValue">{{userCars[0].cars[0].doors}}</p>
+            </div>
+          </div>
+          <div class="map">
+            <zm-googlemap></zm-googlemap>
+          </div>
+        </div>
+        <div class="carDesc">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iste et obcaecati nam recusandae voluptate necessitatibus eaque delectus vel sed dignissimos odio quia, exercitationem, voluptas fugiat vitae veniam facilis quo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit facere saepe veritatis earum. Facilis est possimus nemo. Obcaecati porro, unde distinctio tempora nisi sequi quas, vero tempore nam accusantium adipisci.</p>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>

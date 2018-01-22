@@ -28,6 +28,7 @@ import { CarpageComponent } from './carpage/carpage.component';
 import { AddcarComponent } from './addcar/addcar.component';
 import { MyrentalsComponent } from './myrentals/myrentals.component';
 import { CarsService } from './services/cars.service';
+import { GooglemapComponent } from './googlemap/googlemap.component'
 //material
 /*import { BrowserAnimationsModule } from '@angular/platform-browser/animations';*/
 import { MaterialModule } from './material.module';
@@ -64,7 +65,8 @@ import { CallbackComponent } from './pages/callback/callback.component';
     MyrentalsComponent,
     SearchmapComponent,
     TypeCarFilter,
-    CallbackComponent
+    CallbackComponent,
+    GooglemapComponent
     
 
   ],
