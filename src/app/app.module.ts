@@ -32,12 +32,16 @@ import { CarsService } from './services/cars.service';
 /*import { BrowserAnimationsModule } from '@angular/platform-browser/animations';*/
 import { MaterialModule } from './material.module';
 
+//AUTH
+import {AuthService} from './auth/auth.service';
+
 //maps
 import { AgmCoreModule } from '@agm/core';
 import { SearchmapComponent } from './searchmap/searchmap.component';
 
 //filters
 import { TypeCarFilter  } from './filters/typeCarFilter';
+import { CallbackComponent } from './pages/callback/callback.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +63,8 @@ import { TypeCarFilter  } from './filters/typeCarFilter';
     AddcarComponent,
     MyrentalsComponent,
     SearchmapComponent,
-    TypeCarFilter
+    TypeCarFilter,
+    CallbackComponent
     
 
   ],
@@ -78,7 +83,7 @@ import { TypeCarFilter  } from './filters/typeCarFilter';
     }),
     ReactiveFormsModule
   ],
-  providers: [HttpClientModule, CarsService, { provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [HttpClientModule, CarsService, { provide: LocationStrategy, useClass: HashLocationStrategy}, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
