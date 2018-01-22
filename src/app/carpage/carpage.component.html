@@ -22,7 +22,7 @@
       </div>
       <!-- IF NOT -->
       <div class="zm-bookbutton" *ngIf="!authService.authenticated">
-        <button>Please login first</button>
+        <button (click)="authService.login()">Please login first</button>
       </div>
     </div>
   </div>

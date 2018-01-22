@@ -29,11 +29,11 @@ export class AuthService {
     // in localStorage, log out.
     const lsProfile = localStorage.getItem('profile');
 
-    if (this.tokenValid) {
+    if (this.authenticated) {
       this.userProfile = JSON.parse(lsProfile);
       this.setLoggedIn(true);
       this.isAdmin = localStorage.getItem('isAdmin') === 'true';
-    } else if (!this.tokenValid && lsProfile) {
+    } else if (!this.authenticated && lsProfile) {
       this.logout();
     }
   }
@@ -112,14 +112,9 @@ export class AuthService {
     this.router.navigate(['/']);
   }
 
-  get tokenValid(): boolean {
-    // Check if current time is past access token's expiration
-    const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-    return Date.now() < expiresAt;
-  }
 
   get authenticated(): boolean{
-    const expiresAt = JSON.parse(localStorage.getItem("expres_at"));
+    const expiresAt = JSON.parse(localStorage.getItem("expires_at"));
     return Date.now() < expiresAt;
   }
 }
