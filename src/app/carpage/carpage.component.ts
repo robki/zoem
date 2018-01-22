@@ -6,6 +6,8 @@ import { Location } from '@angular/common';
 import { UserCars }         from '../userCars';
 import { CarsService }  from '../services/cars.service';
 import { Input } from '@angular/core';
+import {AuthService}  from '../auth/auth.service'
+
 @Component({
   selector: 'zm-carpage',
   templateUrl: './carpage.component.html',
@@ -18,7 +20,8 @@ export class CarpageComponent implements OnInit {
   @Input() userCars: UserCars;
   constructor(private route: ActivatedRoute,
     private carsService: CarsService,
-    private location: Location) {
+    private location: Location,
+  public authService: AuthService) {
 
   } 
   //get the car from its id

@@ -15,9 +15,14 @@
           <zm-datepicker></zm-datepicker>
         </div>
       </div>
-      <div class="zm-bookbutton">
+      <!-- IF AUTHENTICATED -->
+      <div class="zm-bookbutton" *ngIf="authService.authenticated">
         <p class="rentPrice"><span>€ {{ userCars[0].cars[0].price }}</span> /day</p>
         <button>Book</button>
+      </div>
+      <!-- IF NOT -->
+      <div class="zm-bookbutton" *ngIf="!authService.authenticated">
+        <button>Please login first</button>
       </div>
     </div>
   </div>

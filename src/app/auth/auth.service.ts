@@ -118,4 +118,8 @@ export class AuthService {
     return Date.now() < expiresAt;
   }
 
+  get authenticated(): boolean{
+    const expiresAt = JSON.parse(localStorage.getItem("expres_at"));
+    return Date.now() < expiresAt;
+  }
 }
