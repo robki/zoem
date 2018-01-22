@@ -19,12 +19,18 @@ zm-dashboardnav{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #262626;
+    /* background-color: #262626; */
     display: block;
     margin: 0 auto;
     margin-top: 25px;
     z-index: 20;
     box-shadow: 1px 1px 1px #26262652;
+    overflow: hidden;
+    
+}
+.profilepic img{
+    width: 100%;
+    height: 100%;
 }
 .allDetails{
     width: 71%;

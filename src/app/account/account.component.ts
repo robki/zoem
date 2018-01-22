@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService} from './../auth/auth.service';
 @Component({
   selector: 'zm-account',
   templateUrl: './account.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) {
+    
+  }
+
 
   ngOnInit() {
    

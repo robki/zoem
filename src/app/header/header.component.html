@@ -10,22 +10,27 @@
     <div class="overlay-content">
       <a routerLink="/" (click)="closeNav()">Home</a>
       <a routerLink="/about" (click)="closeNav()" >About</a>
-      <a (click)="open()" (click)="closeNav()" >Sign Up</a>
+      <!-- <a (click)="open()" (click)="closeNav()" >Sign Up</a> -->
       <a routerLink="/carsresult" (click)="closeNav()">Cars</a>
-      <a routerLink="/account" (click)="closeNav()">Account</a>
+      <a *ngIf="auth.loggedIn" routerLink="/account" (click)="closeNav()">{{auth.userProfile?.name}}</a>
+      <a *ngIf="!auth.loggedIn" (click)="auth.login()" (click)="closeNav()">Log In</a>
+      <a *ngIf="auth.loggedIn">
+        <!-- {{auth.userProfile?.name}} <span class="opacity-half">|</span> -->
+          <a (click)="auth.logout()" (click)="closeNav()">Log Out</a> 
+      </a>
     </div>
 
   </div>
 
 
-  <div class="header-page bg-primary">
+  <!-- <div class="header-page bg-primary">
     <div class="header-page-authStatus">
       <a *ngIf="!auth.loggedIn" (click)="auth.login()">Log In</a>
       <span *ngIf="auth.loggedIn">
         {{auth.userProfile?.name}} <span class="opacity-half">|</span> <a (click)="auth.logout()">Log Out</a>
       </span>
     </div>
-  </div>
+  </div> -->
 
   <span (click)="openNav()" class="zm-hamburger">&#9776;</span>
 </div>

@@ -8,8 +8,14 @@
     <h4>Navigation</h4>
     <a routerLink="/">Home</a>
     <a routerLink="/about">About</a>
-    <a (click)="open()">Sign Up</a>
+    <!-- <a (click)="open()">Sign Up</a> -->
     <a routerLink="/carsresult">Cars</a>
+    <a *ngIf="auth.loggedIn" routerLink="/account">{{auth.userProfile?.name}}</a>
+    <a *ngIf="!auth.loggedIn" (click)="auth.login()">Log In</a>
+      <a *ngIf="auth.loggedIn">
+        <!-- {{auth.userProfile?.name}} <span class="opacity-half">|</span> -->
+          <a (click)="auth.logout()">Log Out</a> 
+      </a>
 <!--     <a routerLink="/account">Account</a> -->
   </div>
   <div class="zm-social">
