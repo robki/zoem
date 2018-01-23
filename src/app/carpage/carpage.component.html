@@ -12,18 +12,21 @@
         </div>
         <div class="zm-searchuntill">
           <label for="">Until</label>
-          <zm-datepicker></zm-datepicker>
+          <zm-datepicker2></zm-datepicker2>
         </div>
       </div>
       <!-- IF AUTHENTICATED -->
       <div class="zm-bookbutton" *ngIf="authService.authenticated">
-        <p class="rentPrice"><span>€ {{ userCars[0].cars[0].price }}</span> /day</p>
-        <button>Book</button>
+        <p class="rentPrice">
+          <span>€ {{ userCars[0].cars[0].price }}</span> /day</p>
+        <button (click)="showPopup()">Book</button>
+        <p id="errorMessage">You have to fill in all fields.</p>
       </div>
       <!-- IF NOT -->
       <div class="disabledButton" *ngIf="!authService.authenticated">
         <button>Book</button>
-        <p class="loginMessage"> <span (click)="authService.login()">Login</span> to see price and book</p>
+        <p class="loginMessage">
+          <span (click)="authService.login()">Login</span> to see price and book</p>
       </div>
     </div>
   </div>
@@ -62,11 +65,18 @@
           </div>
         </div>
         <div class="carDesc">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iste et obcaecati nam recusandae voluptate necessitatibus eaque delectus vel sed dignissimos odio quia, exercitationem, voluptas fugiat vitae veniam facilis quo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit facere saepe veritatis earum. Facilis est possimus nemo. Obcaecati porro, unde distinctio tempora nisi sequi quas, vero tempore nam accusantium adipisci.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iste et obcaecati nam recusandae voluptate necessitatibus
+            eaque delectus vel sed dignissimos odio quia, exercitationem, voluptas fugiat vitae veniam facilis quo. Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit facere saepe veritatis earum. Facilis est possimus
+            nemo. Obcaecati porro, unde distinctio tempora nisi sequi quas, vero tempore nam accusantium adipisci.</p>
         </div>
 
       </div>
 
     </div>
   </div>
+</div>
+<div id="popup">
+  <a href="javascript:void(0)" class="closebtn" (click)="closePopup()">&times;</a>
+  <p id="popupText">We've received your booking. The owner will be in touch soon.</p>
 </div>

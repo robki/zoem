@@ -16,11 +16,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     
   }
-
-  //show registercomponent on click in header
-  open():void{
-    (<HTMLInputElement>document.getElementById('modal')).style.display = 'block';
-  }
   //show the navigation with 'animation'
   openNav():void{
     (<HTMLInputElement>document.getElementById('myNav')).style.height = '100%';

@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { Datepicker2Component } from './datepicker2/datepicker2.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { HttpModule} from '@angular/http';
@@ -55,6 +56,7 @@ import { CallbackComponent } from './pages/callback/callback.component';
     CarsresultComponent,
     LoginComponent,
     DatepickerComponent,
+    Datepicker2Component,
     AccountComponent,
     DashboardnavComponent,
     MycarsComponent,

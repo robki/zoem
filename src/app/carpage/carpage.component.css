@@ -149,7 +149,39 @@ agm-map {
   color: #2a2a2a;
   width: 80%;
   margin: 25px auto 0 auto;;
+} 
+#errorMessage{
+  display: none;
 }
+.closebtn {
+  top: -15px;
+    right: -10px;
+    font-size: 40px;
+    margin-right: 20px;
+    position: absolute;
+    color: #16DA00;
+}
+#popup{
+  display: none;
+  position: absolute;
+  top: 50%;
+  margin-left: 40%;
+  /* margin: 0 auto; */
+  background-color: white;
+  color: black;
+  width: 30%;
+  text-align: center;
+  height: 28%;
+  box-shadow: 1px 1px 1px #26262652;
+  border-radius: 10px;
+  border: #16DA00 1px solid;
+  z-index: 100000;
+}
+#popupText{
+  margin-top: 14%;
+  font-weight: 500;
+}
+  
 @media only screen and (max-width: 840px) {
   .zm-fullpage{
     flex: none;
@@ -202,4 +234,9 @@ agm-map {
   .carDesc{
     height: 100%;
   }
+  #popup{
+    width: 60%;
+    margin-left: 15%;
+  }
+
 }

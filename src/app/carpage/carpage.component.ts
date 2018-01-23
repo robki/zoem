@@ -27,13 +27,32 @@ export class CarpageComponent implements OnInit {
   //get the car from its id
   getCar(){
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id);
     this.carsService.getCar(id)
       .subscribe(car => this.userCars = car);
-    console.log(this.userCars);
 
   }
-  
+  showPopup(){
+    var locInput = (<HTMLInputElement>document.getElementById('locInput')).value;
+    var bookDate = (<HTMLInputElement>document.getElementById('bookDate')).value;
+    var endDate = (<HTMLInputElement>document.getElementById('endDate')).value;
+    
+    if(!locInput || !bookDate || !endDate){
+      (<HTMLInputElement>document.getElementById('errorMessage')).style.display = 'block';
+      (<HTMLInputElement>document.getElementById('popup')).style.display = 'none';
+    }
+    else{
+      (<HTMLInputElement>document.getElementById('errorMessage')).style.display = 'none';
+      (<HTMLInputElement>document.getElementById('popup')).style.display = 'block';
+      (<HTMLInputElement>document.getElementById('locInput')).value = "";
+      (<HTMLInputElement>document.getElementById('bookDate')).value = "";
+      (<HTMLInputElement>document.getElementById('endDate')).value = "";
+
+    }
+  }
+  closePopup(){
+    (<HTMLInputElement>document.getElementById('popup')).style.display = 'none';
+
+  }
   ngOnInit() {
     this.getCar();
   }
