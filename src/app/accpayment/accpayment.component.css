@@ -38,3 +38,38 @@ zm-dashboardnav {
   text-align: center;
   height: 200px;
 }
+@media only screen and (max-width: 840px) {
+
+  zm-dashboardnav{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+  }
+  .allPayments{
+      width: 100%;
+      height: 100%;
+      margin: 0 0 0 0;
+      display: block;
+  }
+  .paymentsContainer{
+    width: 90%;
+    top: 0px;
+    height: 100%;
+  }
+  .paymentsInfo{
+    width: 90%;
+  }
+  img{
+    width: 60%;
+    height: auto;
+    text-align: center;
+    margin: 0 0 0 19%;
+  }
+  .zm-fullpage{
+    display: block;
+    flex: none;
+    width: 100%;
+    height: 100%;
+  }
+}

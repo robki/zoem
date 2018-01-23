@@ -20,7 +20,6 @@ zm-dashboardnav {
 
 h2 {
   margin-top: 25px;
-  color: #16DA00;
 }
 
 .allCars {
@@ -89,4 +88,35 @@ button {
 .saveButton {
   float: left;
   width: 40%;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 840px) {
+
+  zm-dashboardnav{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+  }
+  .allCars{
+      width: 100%;
+      height: 100%;
+      margin: 0 0 0 0;
+      display: block;
+      right: 0;
+  }
+  .carContainer form{
+      width: 100%;
+  }
+  .carContainer{
+    width: 90%;
+    top: 0px;
+    height: 100%;
+  }
+  .zm-fullpage{
+    display: block;
+    flex: none;
+    width: 100%;
+    height: 100%;
+  }
 }

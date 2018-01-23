@@ -77,11 +77,41 @@ button {
 .cancelbtn {
     padding: 14px 20px;
     background-color: #f44336;
+    
 }
 .cancelbtn,.saveButton {
     float: left;
     width: 40%;
+    border-radius: 10px;
 }
 h2{
     margin-top: 25px;
+}
+@media only screen and (max-width: 840px) {
+    zm-dashboardnav{
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        height: 100%;
+      }
+      .allDetails{
+          width: 100%;
+          height: 100%;
+          margin: 0 0 0 0;
+          display: block;
+      }
+      .allDetails form{
+          width: 90%;
+      }
+      .detailsContainer{
+        width: 90%;
+        top: 0px;
+        height: 100%;
+      }
+      .zm-fullpage{
+        display: block;
+        flex: none;
+        width: 100%;
+        height: 100%;
+      }
 }

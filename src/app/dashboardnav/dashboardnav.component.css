@@ -24,3 +24,16 @@ a:hover{
     text-decoration: none;
     font-size: 18px;
 }
+@media only screen and (max-width: 840px) {
+    ul{
+        text-align: center;
+        height: 100%;
+    }
+    li{
+        display: inline-block;
+        width: auto;
+        line-height: 0;
+        margin: 25px 0 10px 0;
+       
+    }
+}
