@@ -55,7 +55,10 @@
     color: white;
     font-size: 4em;
 }
-
+.zm-headtitle span{
+    color: #16DA00;
+    font-weight: 700;
+}
 .zm-headdesc{
     color: white;
     font-size: 1.4em;
@@ -181,6 +184,7 @@ zm-searchmap{
 }
 .zm-jointext{
     margin-top:150px;
+    color: white;
 }
 .zm-joinbutton, .zm-loginbutton{
    margin-top: 80px;
