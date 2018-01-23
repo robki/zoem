@@ -21,8 +21,9 @@
         <button>Book</button>
       </div>
       <!-- IF NOT -->
-      <div class="zm-bookbutton" *ngIf="!authService.authenticated">
-        <button (click)="authService.login()">Please login first</button>
+      <div class="disabledButton" *ngIf="!authService.authenticated">
+        <button>Book</button>
+        <p class="loginMessage"> <span (click)="authService.login()">Login</span> to see price and book</p>
       </div>
     </div>
   </div>

@@ -182,10 +182,10 @@ zm-searchmap{
 .zm-jointext{
     margin-top:150px;
 }
-.zm-joinbutton{
+.zm-joinbutton, .zm-loginbutton{
    margin-top: 80px;
 }
-.zm-joinbutton a{
+.zm-joinbutton a, .zm-loginbutton a{
     background-color: #16DA00;
     color: #FFF;
     position: relative;
@@ -195,12 +195,12 @@ zm-searchmap{
     font-weight: bold;
     
 }
-.zm-joinbutton a:active{
+.zm-joinbutton a:active, .zm-loginbutton a:active{
     background-color: #16DA00;
     transition: .5s ease;
     opacity: 0.3;
 }
-.zm-joinbutton a:hover{
+.zm-joinbutton a:hover, .zm-loginbutton a:hover{
     background-color: #16DA00;
     transition: .5s ease;
     opacity: 0.3;

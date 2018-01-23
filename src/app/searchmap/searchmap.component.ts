@@ -23,8 +23,8 @@ export class SearchmapComponent implements OnInit {
   geolocation(): void {
     //set google maps defaults
     this.zoom = 4;
-    this.latitude = 39.8282;
-    this.longitude = -98.5795;
+    this.latitude = 50.827730;
+    this.longitude = 3.262274;
 
     //create search FormControl
     this.searchControl = new FormControl();
