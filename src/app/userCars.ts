@@ -19,5 +19,7 @@ export class UserCars{
         images: string;
         description: string;
         available: string; 
+        price: string;
+        paid: string;
     }]
 }

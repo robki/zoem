@@ -1,22 +1,22 @@
-
 <div class="zm-upimage">
   <video playsinline autoplay muted loop>
-    <source src="../../assets/blurrycars.mp4" type="video/mp4"> 
+    <source src="../../assets/blurrycars.mp4" type="video/mp4">
   </video>
   <div class="zm-imagetext">
     <div class="zm-headtxt">
-        <h1 class="zm-headtitle"><span>Green</span> way of transportation</h1>
-        <p class="zm-headdesc">Share ecological cars with others.</p>
+      <h1 class="zm-headtitle">
+        <span>Green</span> way of transportation</h1>
+      <p class="zm-headdesc">Share ecological cars with others.</p>
     </div>
     <div class="zm-rentbtn">
       <button routerLink="/carsresult">Start renting</button>
     </div>
   </div>
-<div class="scroll">
-  <div class="scrollAnimation"></div>
+  <div class="scroll">
+    <div class="scrollAnimation"></div>
+  </div>
 </div>
-</div>
-<div class="zm-payedcars">
+<!-- <div class="zm-payedcars">
     <div class="zm-adstitle">
         <h1 class="zm-adstext">Popular cars</h1>
       </div>
@@ -41,13 +41,35 @@
       </div>
     </div>
   </div>
+</div> -->
+<div class="zm-payedcars">
+  <div class="zm-adstitle">
+    <h1 class="zm-adstext">Popular cars</h1>
+  </div>
+  <div class="zm-carads">
+    <div *ngFor="let user of userCars" >
+      <div *ngFor="let car of user.cars" >
+        <div *ngIf="car.paid == 1">
+            <div routerLink="/carpage/{{car.id}}" id="{{car.id}}">
+              <div id="carImage" class="zm-carad">
+                <img src="../../assets/{{car.images}}" alt="">
+                <div class="zm-caroverlay">
+                    <div class="zm-cardesc">€ {{car.price}} - Kortrijk</div>
+                  </div>
+              </div>
+            </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
 </div>
-
 <div class="zm-containersplit">
   <div class="zm-halfl">
     <h1>Enjoy the journey as much as the destination</h1>
-    <p>On <span style="color: #16DA00;font-weight: 700;">Zoem</span> we got a wide variety of electric and hybrid cars.
-      You can rent the car that you want for multiple days and you will be fully insured and have roadside assistance when needed.
+    <p>On
+      <span style="color: #16DA00;font-weight: 700;">Zoem</span> we got a wide variety of electric and hybrid cars. You can rent the car that you want for multiple days
+      and you will be fully insured and have roadside assistance when needed.
     </p>
   </div>
   <div class="zm-halfr">
@@ -57,12 +79,11 @@
 </div>
 <div class="zm-join">
   <h1 class="zm-jointext">Have an electric or hybrid car?</h1>
-<!-- IF AUTHENTICATED -->
+  <!-- IF AUTHENTICATED -->
   <div class="zm-joinbutton" *ngIf="authService.authenticated">
     <a routerLink="/addcar">List your car</a>
   </div>
-   <!-- IF NOT -->
+  <!-- IF NOT -->
   <div class="zm-loginbutton" *ngIf="!authService.authenticated">
-    <a (click)="authService.login()" >Login to list your car</a>
+    <a (click)="authService.login()">Login to list your car</a>
   </div>
-  
