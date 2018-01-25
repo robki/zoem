@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
-    "test": "ng test",
+    "test": "mocha ./server/test/api.js --timeout 10000",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "run": "ng build && node ./server/bin/www",
@@ -71,6 +71,9 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.4.2"
+    "typescript": "~2.4.2",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
   }
 }
