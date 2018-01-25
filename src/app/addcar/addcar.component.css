@@ -3,7 +3,8 @@
   margin: 25px auto 25px auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start
+  justify-content: flex-start;
+  height: 100%;
 }
 
 zm-dashboardnav {
@@ -28,11 +29,13 @@ h2 {
   background-color: #f0f0f0;
   height: 1063px;
   box-shadow: 1px 1px 1px #26262652;
+  height: 100%;
 }
 
 .carContainer {
   width: 50%;
   margin: 50px auto 0 auto;
+  height: auto;
 }
 
 .vehicle div {
@@ -89,6 +92,48 @@ button {
   float: left;
   width: 40%;
   border-radius: 10px;
+}
+#notAuth{
+  z-index: 10000;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(42,42,42); 
+  background-color: rgba(42,42,42, 0.9);
+  overflow-x: hidden; 
+  text-align: center;
+}
+.overlay p {
+  text-decoration: none;
+  font-size: 36px;
+  color: #f1f1f1;
+  display: block;
+  margin-top: 20%;
+}
+.overlay button{
+    border-radius: 10px;
+}
+.overlay button:hover{
+  background-color: #16DA00;
+  transition: .5s ease;
+  opacity: 0.3;
+}
+#buttonl {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  cursor: pointer;
+  
 }
 @media only screen and (max-width: 840px) {
 
