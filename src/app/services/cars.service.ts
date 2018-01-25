@@ -32,7 +32,7 @@ export class CarsService {
   }
   //error
   getCarNo404<Data>(id: number): Observable<UserCars>{
-    const url = `${this.apiUrl}/?id=${id}`;
+    const url = `${this.apiUrl}/${id}`;
     return this.http.get<UserCars[]>(url)
     .pipe(
       map(cars => cars[0]), 
@@ -43,6 +43,7 @@ export class CarsService {
       catchError(this.handleError<UserCars>(`getCar id=${id}`))
     );
   }
+  
   //get car by id
   getCar(id: number): Observable<UserCars>{
     const url = `${this.apiUrl}/${id}`;

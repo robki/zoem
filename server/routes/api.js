@@ -8,17 +8,18 @@ router.get('/getusers', function(req,res,next){
     if(err) console.log(err);
     var users = results;
     res.json(users);
-    console.log(users);
+    //console.log(users);
   });
 });
 
 
 // Get user by id
 router.get('/getusers/:id',function(req,res){
-  User.findOne({id: req.params.id},function(err,results){
+  User.find({"id": req.params.id},function(err,results){
     if(err) console.error(err);
-    console.log(results);
-    res.json(results);
+    var cars = results;
+    console.log(cars);
+    res.json(cars);
 });
 });
 
