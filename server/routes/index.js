@@ -1,19 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/carsresult', function(req, res, next) {
-	console.log("heyhey");
-	
-	res.sendFile('../dist/index.html');
-  	
-});
-
 module.exports = router;
 
 
 
 
-//UNUSED
+//UNUSED PASSPORT
 //AUTHENTICATIE ROUTES
 // var isAuthenticated = function (req, res, next) {
 // 	// if user is authenticated in the session, call the next() to call the next request handler 

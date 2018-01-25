@@ -48,22 +48,8 @@ router.get('/getusers', (req, res) => {
   });
 });
 
-// Get Cars
-router.get('/getcars', (req, res) => {
-  connection((db) => {
-    db.collection('cars')
-      .find()
-      .toArray()
-      .then((users) => {
-        response.data = users;
-        res.json(users);
-      })
-      .catch((err) => {
-        sendError(err, res);
-      });
-  });
-});
-// Get Car by id
+
+// Get user by id
 router.get('/getusers/:id', (req, res) => {
   connection((db) => {
     db.collection('users')
@@ -78,6 +64,17 @@ router.get('/getusers/:id', (req, res) => {
       });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
 //OLD CREATES A NEW USER (REGISTER)
 router.post('/oldregister', function (req, res) {
 
@@ -96,7 +93,6 @@ router.post('/oldregister', function (req, res) {
 });
 // USER LOGIN
 router.post('/login', function (req, res) {});
-
 
 
 // GET A SINGLE USER
