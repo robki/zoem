@@ -7,7 +7,7 @@ import { AuthService} from './../auth/auth.service';
 })
 export class AccountComponent implements OnInit {
 
-  constructor(public auth: AuthService) {
+  constructor(public authService: AuthService) {
     
   }
 

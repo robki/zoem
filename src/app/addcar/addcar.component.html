@@ -76,3 +76,7 @@
     </div>
   </div>
 </div>
+<div id="notAuth" class="overlay" *ngIf="!authService.authenticated">
+    <p>You have to login to get acces to this page.</p>
+    <button id="buttonl" (click)="authService.login()">Log in</button>
+  </div>

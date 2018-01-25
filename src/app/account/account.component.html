@@ -2,11 +2,11 @@
   <zm-dashboardnav></zm-dashboardnav>
 
   <div class="allDetails">
-    
+
     <form class="detailsForm" action="">
-        <div class="profilepic">
-          <img src="{{auth.userProfile?.picture}}" alt="">
-        </div>
+      <div class="profilepic">
+        <img src="{{authService.userProfile?.picture}}" alt="">
+      </div>
       <div class="detailsContainer">
         <h2>Personal information</h2>
         <label>
@@ -41,7 +41,7 @@
         <label>
           <b>Release date</b>
         </label>
-        <zm-datepicker></zm-datepicker>
+        <zm-datepicker2></zm-datepicker2>
         <h2>Billing information</h2>
         <label>
           <b>Address</b>
@@ -60,4 +60,9 @@
       </div>
     </form>
   </div>
+
+</div>
+<div id="notAuth" class="overlay" *ngIf="!authService.authenticated">
+  <p>You have to login to get acces to this page.</p>
+  <button id="buttonl" (click)="authService.login()">Log in</button>
 </div>
