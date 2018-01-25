@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-  //TODO make login work
   //close login component
   close():void{
     (<HTMLInputElement>document.getElementById('modal2')).style.display = 'none';

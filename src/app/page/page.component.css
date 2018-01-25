@@ -1,7 +1,6 @@
 
 .zm-upimage {
     height: 90vh;
-    /*width: 100%;*/
     overflow: hidden;
     display: block;
     margin-top: 25px;
@@ -11,7 +10,6 @@
     box-shadow: 1px 1px 1px #26262652;
 }
 .zm-upimage img{
-    /*position: relative;*/
     width: 100%;
 }
 .scroll{
@@ -96,15 +94,13 @@ zm-searchmap{
 
 }
 .zm-carads{
-   /*width: 100%;*/
-   /*margin-top: 25px;*/
    margin-right: 25px;
    margin-left: 25px;
    display: flex;
    flex-direction: row;
    justify-content: center;
    cursor: pointer;
-   /*padding-top: 50px;*/
+  
    
 
 }
@@ -195,7 +191,6 @@ zm-searchmap{
     position: relative;
     padding: 20px 40px;
     border-radius: 10px;
-    /*border-bottom: 5px solid #1F10A1;*/
     font-weight: bold;
     
 }
