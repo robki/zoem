@@ -1,29 +1,23 @@
-"use strict";
+const mongoose = require("mongoose");
+let userschema = require("../schemas/user");
+let User = mongoose.model("User", userschema, "users");
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-let emailRegExp = /.+\@.+\..+/;
+//DATA ACCESSORS
+User.getAllUsers = function(callback){
+    User.find({}).exec(function(err,docs){
+        if(err){
+            console.log(err);
+            callback(err,null);
+        }
 
-const userSchema  = mongoose.Schema({
-    firstname: {
-        type: String,
-        index: true
-    },
-    lastname: {
-        type: String,
-        unique: true
-    },
-    email: {
-        type: String,
-        required: false,
-        match: /.+\@.+\..+/ //RegExp voor email
-    },
-    password: {
-        type: String,
-        unique: true
-    }
-});
+        console.log(docs);
+        callback(null,docs);
 
-mongoose.Promise = global.Promise;
+    });
+};
 
-module.exports = mongoose.model('user', userSchema);
+
+
+module.exports = User;
+
+
